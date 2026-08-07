@@ -1,0 +1,15 @@
+{
+  "name": "tamssoftware-web",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Web TAMS con formulario de contacto SMTP",
+  "main": "server.js",
+  "type": "commonjs",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.21.2",
+    "nodemailer": "^6.10.1"
+  }
+}
