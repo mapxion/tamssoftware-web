@@ -78,22 +78,26 @@
   .menu .btn{padding:11px 15px}
 }
 
-/* Accesibilidad 07-08-2026 */
+/* Accesibilidad y contraste - 07-08-2026 */
 .menu a.btn-primary,
-.menu a.btn-primary:visited{
-  color:#fff;
-}
+.menu a.btn-primary:visited,
 .menu a.btn-primary:hover,
 .menu a.btn-primary:focus-visible{
   color:#fff;
 }
 
-/* Mejora de contraste manteniendo la paleta TAMS */
+/* Lighthouse marcaba los eyebrow sobre fondos claros */
+.eyebrow{
+  color:#0b5fa5;
+}
+.eyebrow:before{
+  background:#0b5fa5;
+}
+
 .trust span:before{
   color:#4f7d1f;
 }
 
-/* Foco visible para navegación con teclado */
 a:focus-visible,
 button:focus-visible,
 input:focus-visible,
