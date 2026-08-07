@@ -34,7 +34,7 @@
 .news-media{margin-top:22px}
 .news-media img{display:block;width:100%;height:auto;border-radius:16px;border:1px solid var(--line);box-shadow:0 10px 30px rgba(16,24,40,.06)}
 .news-video{position:relative;overflow:hidden;border-radius:16px;aspect-ratio:16/9;background:#0f172a;margin-top:18px}
-.news-video iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+.news-video iframe{position:absolute;inset:0;width:100%;height:100%;border:0}.news-video .video-placeholder{position:absolute;inset:0;width:100%;height:100%;aspect-ratio:auto}
 
 </style>
 </head>
@@ -46,6 +46,7 @@
     <button class="menu-toggle" aria-label="Abrir menú" aria-expanded="false">☰</button>
     <nav class="menu" aria-label="Navegación principal">
       <a href="/#funciones">Funciones</a>
+      <a href="/#soluciones">Soluciones</a>
       <a href="/#proceso">Cómo funciona</a>
       <a href="/tutoriales/">Tutoriales</a>
       <a href="/novedades/" aria-current="page">Novedades</a>
@@ -80,7 +81,12 @@
             <p style="margin-top:12px">El panel reúne las áreas de <strong>Usuarios, Conectados, Actividad, Acceso en red, Sistema y Sesión</strong>, facilitando al administrador el control de usuarios, sesiones y trazabilidad de las operaciones realizadas dentro del sistema.</p>
             <div class="news-tags"><span>Administración</span><span>Actividad</span><span>Usuarios</span><span>Sesiones</span><span>Trazabilidad</span></div>
             <div class="news-media"><img src="/assets/images/novedad-panel-administrador.webp" alt="Nuevo panel de administrador de TAMS con historial y filtros de actividad" loading="lazy"></div>
-            <div class="news-video"><iframe src="https://www.youtube-nocookie.com/embed/W2kLWrlVtlQ" title="Administración y gestión de TAMS" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></div>
+            <div class="news-video">
+              <button class="video-placeholder" data-youtube="W2kLWrlVtlQ" data-title="Administración y gestión de TAMS" aria-label="Reproducir vídeo del nuevo panel de administración de TAMS">
+                <img src="https://i.ytimg.com/vi/W2kLWrlVtlQ/hqdefault.jpg" alt="Vídeo sobre el nuevo panel de administración y gestión de TAMS" loading="lazy">
+                <span class="play">▶</span>
+              </button>
+            </div>
           </div>
         </article>
 
@@ -146,7 +152,7 @@
       <div><h3>TAMS</h3><a href="/#funciones">Funciones</a><a href="/#proceso">Proceso operativo</a><a href="/tutoriales/">Tutoriales</a><a href="/novedades/">Novedades</a><a href="/contacto/">Solicitar información</a></div>
       <div><h3>Legal</h3><a href="/aviso-legal/">Aviso legal</a><a href="/privacidad/">Privacidad</a><a href="mailto:soporte@tamssoftware.es">soporte@tamssoftware.es</a><a href="https://www.intelsi.es/" target="_blank" rel="noopener">Intelsi Telecomunicaciones</a></div>
     </div>
-    <div class="copyright">© 2026 Intelsi Telecomunicaciones, S.L. · TAMS® · <a href="https://xproces.com/" target="_blank" rel="noopener">Procesamiento conectado con Xproces</a></div>
+    <div class="copyright">© 2026 Intelsi Telecomunicaciones, S.L. · TAMS® · <a href="https://xproces.com/" target="_blank" rel="noopener">Procesamiento conectado con XProces</a></div>
   </div>
 </footer>
 
