@@ -6,7 +6,7 @@ app.disable("x-powered-by");
 app.set("trust proxy", 1);
 app.use(express.json({ limit: "20kb" }));
 
-const PORT = Number(process.env.PORT || 3000);
+const PORT = Number(process.env.CONTACT_API_PORT || 3000);
 
 const SMTP_HOST = process.env.SMTP_HOST || "";
 const SMTP_PORT = Number(process.env.SMTP_PORT || 465);
