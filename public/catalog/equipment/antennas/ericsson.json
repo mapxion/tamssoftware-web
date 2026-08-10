@@ -1,1 +1,451 @@
-
+{
+  "schema_version": 1,
+  "manufacturer": "Ericsson",
+  "category": "panel_antenna",
+  "catalog_scope": {
+    "application": "mobile_sector_coverage",
+    "target_frequency_mhz": {
+      "min": 790,
+      "max": 2600
+    },
+    "include_if_any_radiating_or_passive_band_intersects_target": true,
+    "equipment_classes": [
+      "passive_sector_antenna",
+      "active_antenna_system_AAS",
+      "antenna_integrated_radio_AIR",
+      "massive_MIMO_active",
+      "active_plus_passive",
+      "interleaved_antenna_AIR"
+    ],
+    "notes": "TAMS incluye todo equipo de sector que participa en cobertura móvil dentro de 790-2600 MHz, sea pasivo, activo o híbrido/interleaved."
+  },
+  "equipment": [
+    {
+      "catalog_id": "ericsson_kre2014022_21",
+      "manufacturer": "Ericsson",
+      "model": "Antenna 4022",
+      "product_number": "KRE 201 4022/21",
+      "type": "Passive Base Station Sector Antenna",
+      "variant": "2L 2M 2.1m",
+      "datasheet": {
+        "document_id": null,
+        "revision": null,
+        "manufacturer_document": true,
+        "source_copy_status": "official_public_product_page_partial",
+        "source_verified_against_document_markings": true
+      },
+      "rf": {
+        "band_configuration": "2L 2M",
+        "mimo": "4x4",
+        "frequency_scope_match": "790-2600 target; exact public per-port ranges pending datasheet"
+      },
+      "mechanical": {
+        "nominal_height_m": 2.1,
+        "weight_kg": 27
+      },
+      "ret": {
+        "replaceable": true
+      },
+      "wind": {},
+      "cve": {
+        "preferred_weight_kg": 27,
+        "use_manufacturer_wind_loads_when_applicable": true,
+        "geometry_source": null,
+        "data_status": "official_public_partial",
+        "cve_ready": false
+      },
+      "source": {
+        "manufacturer": "Ericsson",
+        "document_type": "official_product_page",
+        "official_current_url_verified": true,
+        "notes": "Ericsson public Passive Antenna page. Exact dimensions, connector layout, band edges and wind loads require detailed datasheet/MyEricsson."
+      },
+      "catalog_history": {
+        "catalogs_seen": [
+          2026
+        ],
+        "first_catalog_seen": 2026,
+        "last_catalog_seen": 2026,
+        "current_public_portfolio": true
+      },
+      "equipment_class": "passive_sector_antenna"
+    },
+    {
+      "catalog_id": "ericsson_kre2014817_16",
+      "manufacturer": "Ericsson",
+      "model": "Antenna 4817",
+      "product_number": "KRE 201 4817/16",
+      "type": "Passive Base Station Sector Antenna",
+      "variant": "2L 4M 1.6m",
+      "datasheet": {
+        "document_id": null,
+        "revision": null,
+        "manufacturer_document": true,
+        "source_copy_status": "official_public_product_page_partial",
+        "source_verified_against_document_markings": true
+      },
+      "rf": {
+        "band_configuration": "2L 4M",
+        "mimo": "4x4",
+        "pim_dbc_max": -156,
+        "frequency_scope_match": "790-2600 target; exact public per-port ranges pending datasheet"
+      },
+      "mechanical": {
+        "nominal_height_m": 1.6
+      },
+      "ret": {
+        "remote_tilt_control": true,
+        "replaceable": true
+      },
+      "wind": {},
+      "cve": {
+        "preferred_weight_kg": null,
+        "use_manufacturer_wind_loads_when_applicable": true,
+        "geometry_source": null,
+        "data_status": "official_public_partial",
+        "cve_ready": false
+      },
+      "source": {
+        "manufacturer": "Ericsson",
+        "document_type": "official_product_page",
+        "official_current_url_verified": true,
+        "notes": "Ericsson public Passive Antenna page. Exact weight, dimensions, connectors and wind loads pending detailed datasheet/MyEricsson."
+      },
+      "catalog_history": {
+        "catalogs_seen": [
+          2026
+        ],
+        "first_catalog_seen": 2026,
+        "last_catalog_seen": 2026,
+        "current_public_portfolio": true
+      },
+      "equipment_class": "passive_sector_antenna"
+    },
+    {
+      "catalog_id": "ericsson_kre2014818_21",
+      "manufacturer": "Ericsson",
+      "model": "Antenna 4818",
+      "product_number": "KRE 201 4818/21",
+      "type": "Passive Base Station Sector Antenna",
+      "variant": "2L 4M 2.1m",
+      "datasheet": {
+        "document_id": null,
+        "revision": null,
+        "manufacturer_document": true,
+        "source_copy_status": "official_public_product_page_partial",
+        "source_verified_against_document_markings": true
+      },
+      "rf": {
+        "band_configuration": "2L 4M",
+        "mimo": "4x4",
+        "pim_dbc_max": -156,
+        "frequency_scope_match": "790-2600 target; exact public per-port ranges pending datasheet"
+      },
+      "mechanical": {
+        "nominal_height_m": 2.1,
+        "weight_kg": 31
+      },
+      "ret": {
+        "remote_tilt_control": true,
+        "replaceable": true
+      },
+      "wind": {},
+      "cve": {
+        "preferred_weight_kg": 31,
+        "use_manufacturer_wind_loads_when_applicable": true,
+        "geometry_source": null,
+        "data_status": "official_public_partial",
+        "cve_ready": false
+      },
+      "source": {
+        "manufacturer": "Ericsson",
+        "document_type": "official_product_page",
+        "official_current_url_verified": true,
+        "notes": "Ericsson public Passive Antenna page. Exact dimensions, connectors, band edges and wind loads pending detailed datasheet/MyEricsson."
+      },
+      "catalog_history": {
+        "catalogs_seen": [
+          2026
+        ],
+        "first_catalog_seen": 2026,
+        "last_catalog_seen": 2026,
+        "current_public_portfolio": true
+      },
+      "equipment_class": "passive_sector_antenna"
+    },
+    {
+      "catalog_id": "ericsson_kre2014819_26",
+      "manufacturer": "Ericsson",
+      "model": "Antenna 4819",
+      "product_number": "KRE 201 4819/26",
+      "type": "Passive Base Station Sector Antenna",
+      "variant": "2L 4M 2.6m",
+      "datasheet": {
+        "document_id": null,
+        "revision": null,
+        "manufacturer_document": true,
+        "source_copy_status": "official_public_product_page_partial",
+        "source_verified_against_document_markings": true
+      },
+      "rf": {
+        "band_configuration": "2L 4M",
+        "mimo": "4x4",
+        "frequency_scope_match": "790-2600 target; exact public per-port ranges pending datasheet"
+      },
+      "mechanical": {
+        "nominal_height_m": 2.6,
+        "weight_kg": 34
+      },
+      "ret": {
+        "replaceable": true
+      },
+      "wind": {},
+      "cve": {
+        "preferred_weight_kg": 34,
+        "use_manufacturer_wind_loads_when_applicable": true,
+        "geometry_source": null,
+        "data_status": "official_public_partial",
+        "cve_ready": false
+      },
+      "source": {
+        "manufacturer": "Ericsson",
+        "document_type": "official_product_page",
+        "official_current_url_verified": true,
+        "notes": "Ericsson public Passive Antenna page. Exact dimensions, connectors, band edges and wind loads pending detailed datasheet/MyEricsson."
+      },
+      "catalog_history": {
+        "catalogs_seen": [
+          2026
+        ],
+        "first_catalog_seen": 2026,
+        "last_catalog_seen": 2026,
+        "current_public_portfolio": true
+      },
+      "equipment_class": "passive_sector_antenna"
+    },
+    {
+      "catalog_id": "ericsson_air3285",
+      "manufacturer": "Ericsson",
+      "model": "AIR 3285",
+      "type": "Antenna Integrated Radio",
+      "equipment_class": "massive_MIMO_active",
+      "technology": [
+        "AAS",
+        "AIR",
+        "FDD Massive MIMO",
+        "32T32R"
+      ],
+      "rf": {
+        "frequency_bands_mhz": [
+          1800,
+          2100
+        ],
+        "mimo": "32T32R",
+        "antenna_elements": 192,
+        "frequency_scope_match": "1800 & 2100 MHz"
+      },
+      "mechanical": {
+        "weight_kg": 30
+      },
+      "wind": {},
+      "cve": {
+        "preferred_weight_kg": 30,
+        "data_status": "official_public_partial",
+        "cve_ready": false
+      },
+      "source": {
+        "manufacturer": "Ericsson",
+        "document_type": "official_ericsson_public_page",
+        "official_current_url_verified": true,
+        "notes": "Ericsson public information: dual-band FDD Massive MIMO 1800/2100 MHz, 32T32R, 192 antenna elements, 30 kg. Dimensions/wind pending detailed datasheet."
+      },
+      "catalog_history": {
+        "catalogs_seen": [
+          2026
+        ],
+        "first_catalog_seen": 2026,
+        "last_catalog_seen": 2026,
+        "current_public_portfolio": true
+      }
+    },
+    {
+      "catalog_id": "ericsson_air3284",
+      "manufacturer": "Ericsson",
+      "model": "AIR 3284",
+      "type": "Antenna Integrated Radio",
+      "equipment_class": "massive_MIMO_active",
+      "technology": [
+        "AAS",
+        "AIR",
+        "FDD Massive MIMO",
+        "triple-band"
+      ],
+      "rf": {
+        "frequency_bands_mhz": [
+          1800,
+          2100,
+          2600
+        ],
+        "mimo": "Massive MIMO",
+        "frequency_scope_match": "1800 / 2100 / 2600 MHz"
+      },
+      "mechanical": {},
+      "wind": {},
+      "cve": {
+        "preferred_weight_kg": null,
+        "data_status": "official_public_partial",
+        "cve_ready": false
+      },
+      "source": {
+        "manufacturer": "Ericsson",
+        "document_type": "official_ericsson_public_page",
+        "official_current_url_verified": true,
+        "notes": "Ericsson/Telstra public announcement: triple-band FDD Massive MIMO for 1800, 2100 and 2600 MHz. Dimensions/weight/wind pending detailed datasheet."
+      },
+      "catalog_history": {
+        "catalogs_seen": [
+          2025,
+          2026
+        ],
+        "first_catalog_seen": 2025,
+        "last_catalog_seen": 2026,
+        "current_public_portfolio": true
+      }
+    },
+    {
+      "catalog_id": "ericsson_interleaved8003",
+      "manufacturer": "Ericsson",
+      "model": "Interleaved Antenna 8003",
+      "type": "Interleaved Antenna",
+      "equipment_class": "interleaved_antenna_AIR",
+      "technology": [
+        "active+passive",
+        "AAS-ready",
+        "FDD/TDD Massive MIMO sub-3GHz"
+      ],
+      "rf": {
+        "passive_low_band_mimo": "4x4",
+        "active_position": "single AAS position",
+        "frequency_scope_match": "passive low band + FDD/TDD Massive MIMO sub-3GHz"
+      },
+      "mechanical": {
+        "weight_kg": 43,
+        "supported_massive_mimo_radio_weight_kg_max": 65
+      },
+      "wind": {},
+      "cve": {
+        "preferred_weight_kg": 43,
+        "data_status": "official_public_partial",
+        "cve_ready": false
+      },
+      "source": {
+        "manufacturer": "Ericsson",
+        "document_type": "official_ericsson_public_page",
+        "official_current_url_verified": true,
+        "notes": "Official public page: 4x4 passive low-band, one AAS position, 43 kg, supports M-MIMO radio up to 65 kg."
+      },
+      "catalog_history": {
+        "catalogs_seen": [
+          2026
+        ],
+        "first_catalog_seen": 2026,
+        "last_catalog_seen": 2026,
+        "current_public_portfolio": true
+      }
+    },
+    {
+      "catalog_id": "ericsson_interleaved8004",
+      "manufacturer": "Ericsson",
+      "model": "Interleaved Antenna 8004",
+      "type": "Interleaved Antenna",
+      "equipment_class": "interleaved_antenna_AIR",
+      "technology": [
+        "active+passive",
+        "AAS-ready",
+        "TDD Massive MIMO"
+      ],
+      "rf": {
+        "passive_ports": {
+          "low_band": 4,
+          "mid_band": 8
+        },
+        "active_position": "single AAS position",
+        "active_radio_scope": "3.5 / 4.9 GHz",
+        "frequency_scope_match": "included because passive low/mid-band section intersects 790-2600 MHz"
+      },
+      "mechanical": {
+        "weight_kg": 41,
+        "supported_massive_mimo_radio_weight_kg_max": 50
+      },
+      "wind": {},
+      "cve": {
+        "preferred_weight_kg": 41,
+        "data_status": "official_public_partial",
+        "cve_ready": false
+      },
+      "source": {
+        "manufacturer": "Ericsson",
+        "document_type": "official_ericsson_public_page",
+        "official_current_url_verified": true,
+        "notes": "Official public page: 4 passive low-band + 8 passive mid-band ports, one AAS position, 41 kg, supports up to 50 kg M-MIMO radio."
+      },
+      "catalog_history": {
+        "catalogs_seen": [
+          2026
+        ],
+        "first_catalog_seen": 2026,
+        "last_catalog_seen": 2026,
+        "current_public_portfolio": true
+      }
+    },
+    {
+      "catalog_id": "ericsson_interleaved8005",
+      "manufacturer": "Ericsson",
+      "model": "Interleaved Antenna 8005",
+      "type": "Interleaved Antenna",
+      "equipment_class": "interleaved_antenna_AIR",
+      "technology": [
+        "active+passive",
+        "AAS-ready",
+        "TDD Massive MIMO"
+      ],
+      "rf": {
+        "passive_ports": {
+          "low_band": 4,
+          "mid_band": 8
+        },
+        "active_position": "single AAS position",
+        "frequency_scope_match": "passive low/mid bands plus Sub-3GHz/3.5GHz AAS"
+      },
+      "mechanical": {
+        "weight_kg": 42,
+        "supported_massive_mimo_radio_weight_kg_max": 50
+      },
+      "wind": {},
+      "cve": {
+        "preferred_weight_kg": 42,
+        "data_status": "official_public_partial",
+        "cve_ready": false
+      },
+      "source": {
+        "manufacturer": "Ericsson",
+        "document_type": "official_ericsson_public_page",
+        "official_current_url_verified": true,
+        "notes": "Official public page: 4 passive low-band + 8 passive mid-band ports, one AAS position, 42 kg, supports up to 50 kg M-MIMO radio."
+      },
+      "catalog_history": {
+        "catalogs_seen": [
+          2026
+        ],
+        "first_catalog_seen": 2026,
+        "last_catalog_seen": 2026,
+        "current_public_portfolio": true
+      }
+    }
+  ],
+  "catalog_research_status": {
+    "last_reviewed": "2026-08-10",
+    "policy": "Include passive, active and hybrid/interleaved mobile-sector equipment if any radiating/passive section intersects 790-2600 MHz.",
+    "important_cve_rule": "For interleaved assemblies distinguish antenna body mass from installed AAS/M-MIMO payload mass; never double-count an integrated radio."
+  }
+}
