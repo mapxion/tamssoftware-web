@@ -1,12 +1,12 @@
 {
-  "schema_version": 1,
+  "schema_version": 2,
   "manufacturer": "Ericsson",
   "category": "panel_antenna",
   "catalog_scope": {
-    "application": "mobile_sector_coverage",
+    "application": "macro_outdoor_mobile_base_station_equipment",
     "target_frequency_mhz": {
-      "min": 790,
-      "max": 2600
+      "min": 698,
+      "max": 3800
     },
     "include_if_any_radiating_or_passive_band_intersects_target": true,
     "equipment_classes": [
@@ -17,7 +17,7 @@
       "active_plus_passive",
       "interleaved_antenna_AIR"
     ],
-    "notes": "TAMS incluye todo equipo de sector que participa en cobertura móvil dentro de 790-2600 MHz, sea pasivo, activo o híbrido/interleaved."
+    "notes": "TAMS master scope: macro outdoor base-station equipment, active or passive, cataloged/present from 2015 onward, with at least one mobile band intersecting approximately 698-3800 MHz. Exact-model data only; unknown structural fields remain pending/null."
   },
   "equipment": [
     {
@@ -326,17 +326,40 @@
       "rf": {
         "passive_low_band_mimo": "4x4",
         "active_position": "single AAS position",
-        "frequency_scope_match": "passive low band + FDD/TDD Massive MIMO sub-3GHz"
+        "frequency_scope_match": "passive low band + FDD/TDD Massive MIMO sub-3GHz",
+        "passive_frequency_ranges_mhz": [
+          {
+            "min": 612,
+            "max": 960
+          }
+        ],
+        "passive_ports": {
+          "low_band": 4
+        }
       },
       "mechanical": {
         "weight_kg": 43,
-        "supported_massive_mimo_radio_weight_kg_max": 65
+        "supported_massive_mimo_radio_weight_kg_max": 65,
+        "dimensions_publicly_available": false,
+        "dimensions_status": "not_found_in_official_public_product_material"
       },
-      "wind": {},
+      "wind": {
+        "publicly_available": false,
+        "description": "Ericsson states low wind load but does not publish numeric manufacturer wind loads on the public product page."
+      },
       "cve": {
         "preferred_weight_kg": 43,
-        "data_status": "official_public_partial",
-        "cve_ready": false
+        "data_status": "official_public_reviewed_dimensions_wind_unavailable",
+        "cve_ready": false,
+        "public_source_reviewed": "2026-08-11",
+        "blocking_fields": [
+          "exact_dimensions",
+          "numeric_manufacturer_wind_loads"
+        ],
+        "status_label": "CVE parcial",
+        "dimensions_complete": false,
+        "weight_complete": true,
+        "wind_complete": false
       },
       "source": {
         "manufacturer": "Ericsson",
@@ -350,7 +373,119 @@
         ],
         "first_catalog_seen": 2026,
         "last_catalog_seen": 2026,
-        "current_public_portfolio": true
+        "current_public_portfolio": true,
+        "eligible_from_2015_policy": true
+      },
+      "tams_extension": {
+        "identity": {
+          "equipment_id": "ericsson_interleaved8003",
+          "manufacturer_slug": "ericsson",
+          "model_slug": "interleaved_antenna_8003"
+        },
+        "visual": {
+          "image_main": "images/ericsson/interleaved_8003.webp",
+          "image_thumb": "images/ericsson/interleaved_8003_thumb.webp",
+          "image_status": "official_product_image_found",
+          "source_url": "https://www.ericsson.com/en/portfolio/networks/ericsson-radio-system/antenna-system/next-gen-solutions/interleaved-antenna-8003",
+          "source_type": "official_product_page_exact_model",
+          "verified_exact_model": true,
+          "photo_search_query": "Ericsson \"Interleaved Antenna 8003\" base station antenna",
+          "priority": "MEDIUM",
+          "notes": "Official Ericsson exact product page with image; 43 kg.",
+          "normalization_status": "official_page_locked_direct_asset_pending"
+        },
+        "ai": {
+          "coarse_class": "passive_base_station_antenna",
+          "training_class": "ericsson_interleaved8003",
+          "synthetic_geometry_ready": false,
+          "synthetic_geometry_basis": [],
+          "distinguishing_features_status": "pending_manual_review"
+        },
+        "cve_integration": {
+          "status": "blocked",
+          "blocking_fields": [
+            "exact_dimensions",
+            "numeric_manufacturer_wind_loads"
+          ],
+          "instance_required_fields": [
+            "station_object_id",
+            "x_m",
+            "y_m",
+            "z_m",
+            "mount_height_m",
+            "azimuth_deg",
+            "tilt_deg",
+            "support_face_or_sector",
+            "offset_to_mast_m"
+          ]
+        },
+        "tams_status": {
+          "catalog_record_ready": true,
+          "visual_ready": true,
+          "ai_ready": false,
+          "cve_ready": false,
+          "scope_eligible": true
+        }
+      },
+      "tams_integration": {
+        "technology_group": "5G",
+        "tams_catalog_state": "FROZEN_FOR_FIRST_INTEGRATION",
+        "local_image_main": "images/5g/ericsson_interleaved8003.webp",
+        "local_image_thumb": "images/5g/thumbs/ericsson_interleaved8003.webp",
+        "local_image_binary_in_package": false,
+        "image_exact_verified": true,
+        "image_source_url": "https://mediabank.ericsson.net/portfolio/main/188736_f6b9ae2cc06ec21b7c98ba03f69fbd46.jpg",
+        "image_source_page": "https://www.ericsson.com/en/portfolio/networks/ericsson-radio-system/antenna-system/next-gen-solutions/interleaved-antenna-8003",
+        "image_status": "normalized_exact_v39_confirmed",
+        "geometry_ready": false,
+        "weight_ready": true,
+        "cve_ready": false,
+        "cve_blocking_fields": [
+          "exact_dimensions",
+          "numeric_manufacturer_wind_loads"
+        ],
+        "allow_null_pending_fields": true
+      },
+      "visual": {
+        "image_main": "images/ericsson/interleaved_8003.webp",
+        "image_thumb": "images/ericsson/interleaved_8003_thumb.webp",
+        "verified_exact_model": true,
+        "source_url": "https://www.ericsson.com/en/portfolio/networks/ericsson-radio-system/antenna-system/next-gen-solutions/interleaved-antenna-8003",
+        "source_type": "official_product_page_exact_model",
+        "normalization_status": "official_page_locked_direct_asset_pending",
+        "binary_in_local_catalog": false
+      },
+      "tams_library": {
+        "technology_group": "5G",
+        "record_state": "frozen_for_tams_integration",
+        "dimensions_status": "pending_exact_documentation",
+        "weight_status": "exact",
+        "wind_status": "pending_exact_documentation",
+        "cve_ready": false,
+        "cve_blocking_fields": [
+          "exact_dimensions",
+          "numeric_manufacturer_wind_loads"
+        ],
+        "do_not_infer_missing_values": true
+      },
+      "dimensions": null,
+      "library_display": {
+        "catalog_card": "partial",
+        "dimensions_text": "Pendiente de documentación exacta",
+        "weight_text": "43 kg",
+        "wind_frontal_text": "Pendiente de documentación exacta",
+        "wind_lateral_text": "Pendiente de documentación exacta",
+        "wind_max_text": "Pendiente de documentación exacta",
+        "cve_status_text": "CVE PARCIAL · falta: exact_dimensions, numeric_manufacturer_wind_loads"
+      },
+      "image": {
+        "local_main": "equipment/antennas/images/ericsson/ericsson_interleaved8003.webp",
+        "local_thumb": "equipment/antennas/images/ericsson/thumbs/ericsson_interleaved8003.webp",
+        "exact_model_verified": true,
+        "source_url": "https://mediabank.ericsson.net/portfolio/main/188736_f6b9ae2cc06ec21b7c98ba03f69fbd46.jpg",
+        "source_page": "https://www.ericsson.com/en/portfolio/networks/ericsson-radio-system/antenna-system/next-gen-solutions/interleaved-antenna-8003",
+        "status": "local_download_required",
+        "allow_similar_substitute": false
       }
     },
     {
@@ -371,17 +506,43 @@
         },
         "active_position": "single AAS position",
         "active_radio_scope": "3.5 / 4.9 GHz",
-        "frequency_scope_match": "included because passive low/mid-band section intersects 790-2600 MHz"
+        "frequency_scope_match": "included because passive low/mid-band section intersects 790-2600 MHz",
+        "passive_frequency_ranges_mhz": [
+          {
+            "min": 612,
+            "max": 960,
+            "section": "low_band"
+          },
+          {
+            "min": 1427,
+            "max": 2690,
+            "section": "mid_band"
+          }
+        ]
       },
       "mechanical": {
         "weight_kg": 41,
-        "supported_massive_mimo_radio_weight_kg_max": 50
+        "supported_massive_mimo_radio_weight_kg_max": 50,
+        "dimensions_publicly_available": false,
+        "dimensions_status": "not_found_in_official_public_product_material"
       },
-      "wind": {},
+      "wind": {
+        "publicly_available": false,
+        "description": "Ericsson states low wind load but does not publish numeric manufacturer wind loads on the public product page."
+      },
       "cve": {
         "preferred_weight_kg": 41,
-        "data_status": "official_public_partial",
-        "cve_ready": false
+        "data_status": "official_public_reviewed_dimensions_wind_unavailable",
+        "cve_ready": false,
+        "public_source_reviewed": "2026-08-11",
+        "blocking_fields": [
+          "exact_dimensions",
+          "numeric_manufacturer_wind_loads"
+        ],
+        "status_label": "CVE parcial",
+        "dimensions_complete": false,
+        "weight_complete": true,
+        "wind_complete": false
       },
       "source": {
         "manufacturer": "Ericsson",
@@ -395,7 +556,119 @@
         ],
         "first_catalog_seen": 2026,
         "last_catalog_seen": 2026,
-        "current_public_portfolio": true
+        "current_public_portfolio": true,
+        "eligible_from_2015_policy": true
+      },
+      "tams_extension": {
+        "identity": {
+          "equipment_id": "ericsson_interleaved8004",
+          "manufacturer_slug": "ericsson",
+          "model_slug": "interleaved_antenna_8004"
+        },
+        "visual": {
+          "image_main": "images/ericsson/interleaved_8004.webp",
+          "image_thumb": "images/ericsson/interleaved_8004_thumb.webp",
+          "image_status": "official_product_image_found",
+          "source_url": "https://www.ericsson.com/en/portfolio/networks/ericsson-radio-system/antenna-system/next-gen-solutions/interleaved-antenna-8004",
+          "source_type": "official_product_page_exact_model",
+          "verified_exact_model": true,
+          "photo_search_query": "Ericsson \"Interleaved Antenna 8004\" base station antenna",
+          "priority": "MEDIUM",
+          "notes": "Official Ericsson exact product page with image; 41 kg.",
+          "normalization_status": "official_page_locked_direct_asset_pending"
+        },
+        "ai": {
+          "coarse_class": "passive_base_station_antenna",
+          "training_class": "ericsson_interleaved8004",
+          "synthetic_geometry_ready": false,
+          "synthetic_geometry_basis": [],
+          "distinguishing_features_status": "pending_manual_review"
+        },
+        "cve_integration": {
+          "status": "blocked",
+          "blocking_fields": [
+            "exact_dimensions",
+            "numeric_manufacturer_wind_loads"
+          ],
+          "instance_required_fields": [
+            "station_object_id",
+            "x_m",
+            "y_m",
+            "z_m",
+            "mount_height_m",
+            "azimuth_deg",
+            "tilt_deg",
+            "support_face_or_sector",
+            "offset_to_mast_m"
+          ]
+        },
+        "tams_status": {
+          "catalog_record_ready": true,
+          "visual_ready": true,
+          "ai_ready": false,
+          "cve_ready": false,
+          "scope_eligible": true
+        }
+      },
+      "tams_integration": {
+        "technology_group": "5G",
+        "tams_catalog_state": "FROZEN_FOR_FIRST_INTEGRATION",
+        "local_image_main": "images/5g/ericsson_interleaved8004.webp",
+        "local_image_thumb": "images/5g/thumbs/ericsson_interleaved8004.webp",
+        "local_image_binary_in_package": false,
+        "image_exact_verified": true,
+        "image_source_url": "https://mediabank.ericsson.net/portfolio/main/188740_e848fbd3390dd3d281eebb269e8b2a4f.jpg",
+        "image_source_page": "https://www.ericsson.com/en/portfolio/networks/ericsson-radio-system/antenna-system/next-gen-solutions/interleaved-antenna-8004",
+        "image_status": "normalized_exact_v39_confirmed",
+        "geometry_ready": false,
+        "weight_ready": true,
+        "cve_ready": false,
+        "cve_blocking_fields": [
+          "exact_dimensions",
+          "numeric_manufacturer_wind_loads"
+        ],
+        "allow_null_pending_fields": true
+      },
+      "visual": {
+        "image_main": "images/ericsson/interleaved_8004.webp",
+        "image_thumb": "images/ericsson/interleaved_8004_thumb.webp",
+        "verified_exact_model": true,
+        "source_url": "https://www.ericsson.com/en/portfolio/networks/ericsson-radio-system/antenna-system/next-gen-solutions/interleaved-antenna-8004",
+        "source_type": "official_product_page_exact_model",
+        "normalization_status": "official_page_locked_direct_asset_pending",
+        "binary_in_local_catalog": false
+      },
+      "tams_library": {
+        "technology_group": "5G",
+        "record_state": "frozen_for_tams_integration",
+        "dimensions_status": "pending_exact_documentation",
+        "weight_status": "exact",
+        "wind_status": "pending_exact_documentation",
+        "cve_ready": false,
+        "cve_blocking_fields": [
+          "exact_dimensions",
+          "numeric_manufacturer_wind_loads"
+        ],
+        "do_not_infer_missing_values": true
+      },
+      "dimensions": null,
+      "library_display": {
+        "catalog_card": "partial",
+        "dimensions_text": "Pendiente de documentación exacta",
+        "weight_text": "41 kg",
+        "wind_frontal_text": "Pendiente de documentación exacta",
+        "wind_lateral_text": "Pendiente de documentación exacta",
+        "wind_max_text": "Pendiente de documentación exacta",
+        "cve_status_text": "CVE PARCIAL · falta: exact_dimensions, numeric_manufacturer_wind_loads"
+      },
+      "image": {
+        "local_main": "equipment/antennas/images/ericsson/ericsson_interleaved8004.webp",
+        "local_thumb": "equipment/antennas/images/ericsson/thumbs/ericsson_interleaved8004.webp",
+        "exact_model_verified": true,
+        "source_url": "https://mediabank.ericsson.net/portfolio/main/188740_e848fbd3390dd3d281eebb269e8b2a4f.jpg",
+        "source_page": "https://www.ericsson.com/en/portfolio/networks/ericsson-radio-system/antenna-system/next-gen-solutions/interleaved-antenna-8004",
+        "status": "local_download_required",
+        "allow_similar_substitute": false
       }
     },
     {
@@ -415,17 +688,43 @@
           "mid_band": 8
         },
         "active_position": "single AAS position",
-        "frequency_scope_match": "passive low/mid bands plus Sub-3GHz/3.5GHz AAS"
+        "frequency_scope_match": "passive low/mid bands plus Sub-3GHz/3.5GHz AAS",
+        "passive_frequency_ranges_mhz": [
+          {
+            "min": 612,
+            "max": 960,
+            "section": "low_band"
+          },
+          {
+            "min": 1427,
+            "max": 2690,
+            "section": "mid_band"
+          }
+        ]
       },
       "mechanical": {
         "weight_kg": 42,
-        "supported_massive_mimo_radio_weight_kg_max": 50
+        "supported_massive_mimo_radio_weight_kg_max": 50,
+        "dimensions_publicly_available": false,
+        "dimensions_status": "not_found_in_official_public_product_material"
       },
-      "wind": {},
+      "wind": {
+        "publicly_available": false,
+        "description": "Ericsson states low wind load but does not publish numeric manufacturer wind loads on the public product page."
+      },
       "cve": {
         "preferred_weight_kg": 42,
-        "data_status": "official_public_partial",
-        "cve_ready": false
+        "data_status": "official_public_reviewed_dimensions_wind_unavailable",
+        "cve_ready": false,
+        "public_source_reviewed": "2026-08-11",
+        "blocking_fields": [
+          "exact_dimensions",
+          "numeric_manufacturer_wind_loads"
+        ],
+        "status_label": "CVE parcial",
+        "dimensions_complete": false,
+        "weight_complete": true,
+        "wind_complete": false
       },
       "source": {
         "manufacturer": "Ericsson",
@@ -439,13 +738,1981 @@
         ],
         "first_catalog_seen": 2026,
         "last_catalog_seen": 2026,
-        "current_public_portfolio": true
+        "current_public_portfolio": true,
+        "eligible_from_2015_policy": true
+      },
+      "tams_extension": {
+        "identity": {
+          "equipment_id": "ericsson_interleaved8005",
+          "manufacturer_slug": "ericsson",
+          "model_slug": "interleaved_antenna_8005"
+        },
+        "visual": {
+          "image_main": "images/ericsson/interleaved_8005.webp",
+          "image_thumb": "images/ericsson/interleaved_8005_thumb.webp",
+          "image_status": "official_product_image_found",
+          "source_url": "https://www.ericsson.com/en/portfolio/networks/ericsson-radio-system/antenna-system/next-gen-solutions/interleaved-antenna-8005",
+          "source_type": "official_product_page_exact_model",
+          "verified_exact_model": true,
+          "photo_search_query": "Ericsson \"Interleaved Antenna 8005\" base station antenna",
+          "priority": "MEDIUM",
+          "notes": "Official Ericsson exact product page with image; 42 kg.",
+          "normalization_status": "official_page_locked_direct_asset_pending"
+        },
+        "ai": {
+          "coarse_class": "passive_base_station_antenna",
+          "training_class": "ericsson_interleaved8005",
+          "synthetic_geometry_ready": false,
+          "synthetic_geometry_basis": [],
+          "distinguishing_features_status": "pending_manual_review"
+        },
+        "cve_integration": {
+          "status": "blocked",
+          "blocking_fields": [
+            "exact_dimensions",
+            "numeric_manufacturer_wind_loads"
+          ],
+          "instance_required_fields": [
+            "station_object_id",
+            "x_m",
+            "y_m",
+            "z_m",
+            "mount_height_m",
+            "azimuth_deg",
+            "tilt_deg",
+            "support_face_or_sector",
+            "offset_to_mast_m"
+          ]
+        },
+        "tams_status": {
+          "catalog_record_ready": true,
+          "visual_ready": true,
+          "ai_ready": false,
+          "cve_ready": false,
+          "scope_eligible": true
+        }
+      },
+      "tams_integration": {
+        "technology_group": "5G",
+        "tams_catalog_state": "FROZEN_FOR_FIRST_INTEGRATION",
+        "local_image_main": "images/5g/ericsson_interleaved8005.webp",
+        "local_image_thumb": "images/5g/thumbs/ericsson_interleaved8005.webp",
+        "local_image_binary_in_package": false,
+        "image_exact_verified": true,
+        "image_source_url": "https://mediabank.ericsson.net/portfolio/main/188750_3461570df6b7d9e8ecd0c9df4215e9b3.jpg",
+        "image_source_page": "https://www.ericsson.com/en/portfolio/networks/ericsson-radio-system/antenna-system/next-gen-solutions/interleaved-antenna-8005",
+        "image_status": "normalized_exact_v39_confirmed",
+        "geometry_ready": false,
+        "weight_ready": true,
+        "cve_ready": false,
+        "cve_blocking_fields": [
+          "exact_dimensions",
+          "numeric_manufacturer_wind_loads"
+        ],
+        "allow_null_pending_fields": true
+      },
+      "visual": {
+        "image_main": "images/ericsson/interleaved_8005.webp",
+        "image_thumb": "images/ericsson/interleaved_8005_thumb.webp",
+        "verified_exact_model": true,
+        "source_url": "https://www.ericsson.com/en/portfolio/networks/ericsson-radio-system/antenna-system/next-gen-solutions/interleaved-antenna-8005",
+        "source_type": "official_product_page_exact_model",
+        "normalization_status": "official_page_locked_direct_asset_pending",
+        "binary_in_local_catalog": false
+      },
+      "tams_library": {
+        "technology_group": "5G",
+        "record_state": "frozen_for_tams_integration",
+        "dimensions_status": "pending_exact_documentation",
+        "weight_status": "exact",
+        "wind_status": "pending_exact_documentation",
+        "cve_ready": false,
+        "cve_blocking_fields": [
+          "exact_dimensions",
+          "numeric_manufacturer_wind_loads"
+        ],
+        "do_not_infer_missing_values": true
+      },
+      "dimensions": null,
+      "library_display": {
+        "catalog_card": "partial",
+        "dimensions_text": "Pendiente de documentación exacta",
+        "weight_text": "42 kg",
+        "wind_frontal_text": "Pendiente de documentación exacta",
+        "wind_lateral_text": "Pendiente de documentación exacta",
+        "wind_max_text": "Pendiente de documentación exacta",
+        "cve_status_text": "CVE PARCIAL · falta: exact_dimensions, numeric_manufacturer_wind_loads"
+      },
+      "image": {
+        "local_main": "equipment/antennas/images/ericsson/ericsson_interleaved8005.webp",
+        "local_thumb": "equipment/antennas/images/ericsson/thumbs/ericsson_interleaved8005.webp",
+        "exact_model_verified": true,
+        "source_url": "https://mediabank.ericsson.net/portfolio/main/188750_3461570df6b7d9e8ecd0c9df4215e9b3.jpg",
+        "source_page": "https://www.ericsson.com/en/portfolio/networks/ericsson-radio-system/antenna-system/next-gen-solutions/interleaved-antenna-8005",
+        "status": "local_download_required",
+        "allow_similar_substitute": false
+      }
+    },
+    {
+      "catalog_id": "ericsson_air3268",
+      "manufacturer": "Ericsson",
+      "model": "AIR 3268",
+      "type": "Antenna Integrated Radio",
+      "equipment_class": "active_antenna_integrated_radio",
+      "datasheet": {
+        "document_id": null,
+        "manufacturer_document": true,
+        "revision": null,
+        "source_copy_status": "official_public_product_and_deployment_sources",
+        "source_verified_against_document_markings": true
+      },
+      "rf": {
+        "technology": "5G NR",
+        "band_class": "TDD mid-band",
+        "frequency_scope_match": "within 3.3–3.8 GHz family; exact product variant/sub-range pending detailed datasheet",
+        "mimo": "Massive MIMO"
+      },
+      "mechanical": {
+        "weight_kg_public_sources": [
+          12,
+          14
+        ],
+        "weight_status": "variant_or_publication_difference_requires_exact_variant_resolution",
+        "volume_l_public": 25,
+        "dimensions_publicly_available": false
+      },
+      "wind": {
+        "status": "requires_exact_variant_datasheet_for_cve"
+      },
+      "cve": {
+        "cve_ready": false,
+        "blocking_fields": [
+          "exact_variant",
+          "exact_dimensions",
+          "exact_weight",
+          "manufacturer_wind_loads"
+        ],
+        "data_status": "official_public_sources_confirm_product_and_macro_deployment",
+        "geometry_source": null,
+        "preferred_weight_kg": null,
+        "use_manufacturer_wind_loads_when_applicable": true,
+        "status_label": "CVE parcial",
+        "dimensions_complete": false,
+        "weight_complete": false,
+        "wind_complete": false
+      },
+      "source": {
+        "manufacturer": "Ericsson",
+        "document_type": "official_product/deployment_sources",
+        "official_current_url_verified": true,
+        "notes": "Official Ericsson sources confirm AIR 3268 as lightweight Massive MIMO antenna-integrated radio for mid-band 5G and tower/rooftop/pole/wall deployment."
+      },
+      "catalog_history": {
+        "catalogs_seen": [
+          2022,
+          2023,
+          2026
+        ],
+        "eligible_from_2015_policy": true,
+        "first_catalog_seen": 2022,
+        "last_catalog_seen": 2026
+      },
+      "tams_extension": {
+        "identity": {
+          "equipment_id": "ericsson_air3268",
+          "manufacturer_slug": "ericsson",
+          "model_slug": "air_3268"
+        },
+        "visual": {
+          "image_main": "images/ericsson/air_3268.webp",
+          "image_thumb": "images/ericsson/air_3268_thumb.webp",
+          "image_status": "official_highres_image_found",
+          "source_url": "https://www.ericsson.com/en/newsroom/photo-library/network-products",
+          "source_type": "official_mediabank_highres",
+          "verified_exact_model": true,
+          "priority": "HIGH",
+          "notes": "Ericsson newsroom has exact AIR 3268 high-resolution product image.",
+          "direct_image_url": "https://mediabank.ericsson.net/deployedFiles/ericsson.com/AIR_3268_Front_320_149043%20%282%29.jpg",
+          "normalization_status": "source_locked_download_pending"
+        },
+        "ai": {
+          "coarse_class": "active_antenna_integrated_radio",
+          "training_class": "ericsson_air3268",
+          "synthetic_geometry_ready": false,
+          "synthetic_geometry_basis": [],
+          "distinguishing_features_status": "pending_exact_dimensions"
+        },
+        "cve_integration": {
+          "status": "blocked",
+          "blocking_fields": [
+            "exact_variant",
+            "exact_dimensions",
+            "exact_weight",
+            "manufacturer_wind_loads"
+          ],
+          "instance_required_fields": [
+            "station_object_id",
+            "x_m",
+            "y_m",
+            "z_m",
+            "mount_height_m",
+            "azimuth_deg",
+            "tilt_deg",
+            "support_face_or_sector",
+            "offset_to_mast_m"
+          ]
+        },
+        "tams_status": {
+          "catalog_record_ready": true,
+          "visual_ready": true,
+          "ai_ready": false,
+          "cve_ready": false,
+          "scope_eligible": true
+        }
+      },
+      "tams_integration": {
+        "technology_group": "5G",
+        "tams_catalog_state": "FROZEN_FOR_FIRST_INTEGRATION",
+        "local_image_main": "images/5g/ericsson_air3268.webp",
+        "local_image_thumb": "images/5g/thumbs/ericsson_air3268.webp",
+        "local_image_binary_in_package": false,
+        "image_exact_verified": true,
+        "image_source_url": "https://mediabank.ericsson.net/deployedFiles/ericsson.com/AIR_3268_Front_320_149043%20%282%29.jpg",
+        "image_source_page": "https://www.ericsson.com/en/newsroom/photo-library/network-products",
+        "image_status": "normalized_exact_v39_confirmed",
+        "geometry_ready": false,
+        "weight_ready": false,
+        "cve_ready": false,
+        "cve_blocking_fields": [
+          "exact_variant",
+          "exact_dimensions",
+          "exact_weight",
+          "manufacturer_wind_loads"
+        ],
+        "allow_null_pending_fields": true
+      },
+      "technology": [
+        "AAS",
+        "5G NR",
+        "Massive MIMO"
+      ],
+      "visual": {
+        "image_main": "images/ericsson/air_3268.webp",
+        "image_thumb": "images/ericsson/air_3268_thumb.webp",
+        "verified_exact_model": true,
+        "source_url": "https://www.ericsson.com/en/newsroom/photo-library/network-products",
+        "source_type": "official_mediabank_highres",
+        "normalization_status": "source_locked_download_pending",
+        "binary_in_local_catalog": false
+      },
+      "tams_library": {
+        "technology_group": "5G",
+        "record_state": "frozen_for_tams_integration",
+        "dimensions_status": "pending_exact_documentation",
+        "weight_status": "pending_exact_documentation",
+        "wind_status": "pending_exact_documentation",
+        "cve_ready": false,
+        "cve_blocking_fields": [
+          "exact_variant",
+          "exact_dimensions",
+          "exact_weight",
+          "manufacturer_wind_loads"
+        ],
+        "do_not_infer_missing_values": true
+      },
+      "dimensions": null,
+      "library_display": {
+        "catalog_card": "partial",
+        "dimensions_text": "Pendiente de documentación exacta",
+        "weight_text": "Pendiente de documentación exacta",
+        "wind_frontal_text": "Pendiente de documentación exacta",
+        "wind_lateral_text": "Pendiente de documentación exacta",
+        "wind_max_text": "Pendiente de documentación exacta",
+        "cve_status_text": "CVE PARCIAL · falta: exact_variant, exact_dimensions, exact_weight, manufacturer_wind_loads"
+      },
+      "image": {
+        "local_main": "equipment/antennas/images/ericsson/ericsson_air3268.webp",
+        "local_thumb": "equipment/antennas/images/ericsson/thumbs/ericsson_air3268.webp",
+        "exact_model_verified": true,
+        "source_url": "https://mediabank.ericsson.net/deployedFiles/ericsson.com/AIR_3268_Front_320_149043%20%282%29.jpg",
+        "source_page": "https://www.ericsson.com/en/newsroom/photo-library/network-products",
+        "status": "local_download_required",
+        "allow_similar_substitute": false
+      }
+    },
+    {
+      "catalog_id": "ericsson_air6488",
+      "manufacturer": "Ericsson",
+      "model": "AIR 6488",
+      "type": "Antenna Integrated Radio",
+      "equipment_class": "active_antenna_integrated_radio",
+      "datasheet": {
+        "document_id": null,
+        "manufacturer_document": true,
+        "revision": null,
+        "source_copy_status": "official_public_deployment_sources",
+        "source_verified_against_document_markings": true
+      },
+      "rf": {
+        "technology": "5G NR",
+        "frequency_evidence_mhz": [
+          3500,
+          3700
+        ],
+        "band_class": "TDD mid-band",
+        "mimo": "64T64R Massive MIMO",
+        "frequency_scope_match": "confirmed inside 698–3800 MHz scope"
+      },
+      "mechanical": {
+        "dimensions_publicly_available": false,
+        "weight_kg": null
+      },
+      "wind": {
+        "status": "requires_exact_variant_datasheet_for_cve"
+      },
+      "cve": {
+        "cve_ready": false,
+        "blocking_fields": [
+          "exact_dimensions",
+          "weight_kg",
+          "manufacturer_wind_loads"
+        ],
+        "data_status": "official_public_sources_confirm_3p5_3p7GHz_macro_product",
+        "geometry_source": null,
+        "preferred_weight_kg": null,
+        "use_manufacturer_wind_loads_when_applicable": true,
+        "status_label": "CVE parcial",
+        "dimensions_complete": false,
+        "weight_complete": false,
+        "wind_complete": false
+      },
+      "source": {
+        "manufacturer": "Ericsson",
+        "document_type": "official_case_studies",
+        "official_current_url_verified": true,
+        "notes": "Ericsson documents AIR 6488 at 3.5 GHz and 3.7 GHz, 64T64R Massive MIMO."
+      },
+      "catalog_history": {
+        "catalogs_seen": [
+          2020,
+          2021,
+          2026
+        ],
+        "eligible_from_2015_policy": true,
+        "first_catalog_seen": 2020,
+        "last_catalog_seen": 2026
+      },
+      "tams_extension": {
+        "identity": {
+          "equipment_id": "ericsson_air6488",
+          "manufacturer_slug": "ericsson",
+          "model_slug": "air_6488"
+        },
+        "visual": {
+          "image_main": "images/ericsson/air_6488.webp",
+          "image_thumb": "images/ericsson/air_6488_thumb.webp",
+          "image_status": "official_case_image_found",
+          "source_url": "https://www.ericsson.com/en/cases/2020/skt-build-5g-with-precision",
+          "source_type": "official_case_exact_model",
+          "verified_exact_model": true,
+          "priority": "HIGH",
+          "normalization_status": "official_page_locked_direct_asset_pending",
+          "notes": "Official Ericsson SK Telecom case explicitly identifies AIR 6488 as the deployed 64T64R product."
+        },
+        "ai": {
+          "coarse_class": "active_antenna_integrated_radio",
+          "training_class": "ericsson_air6488",
+          "synthetic_geometry_ready": false,
+          "synthetic_geometry_basis": [],
+          "distinguishing_features_status": "pending_exact_dimensions"
+        },
+        "cve_integration": {
+          "status": "blocked",
+          "blocking_fields": [
+            "exact_dimensions",
+            "weight_kg",
+            "manufacturer_wind_loads"
+          ],
+          "instance_required_fields": [
+            "station_object_id",
+            "x_m",
+            "y_m",
+            "z_m",
+            "mount_height_m",
+            "azimuth_deg",
+            "tilt_deg",
+            "support_face_or_sector",
+            "offset_to_mast_m"
+          ]
+        },
+        "tams_status": {
+          "catalog_record_ready": true,
+          "visual_ready": true,
+          "ai_ready": false,
+          "cve_ready": false,
+          "scope_eligible": true
+        }
+      },
+      "tams_integration": {
+        "technology_group": "5G",
+        "tams_catalog_state": "FROZEN_FOR_FIRST_INTEGRATION",
+        "local_image_main": "images/5g/ericsson_air6488.webp",
+        "local_image_thumb": "images/5g/thumbs/ericsson_air6488.webp",
+        "local_image_binary_in_package": false,
+        "image_exact_verified": true,
+        "image_source_url": "https://www.red-dot.org/fileadmin/_processed_/6/b/csm_47-03787-2019PD-1_09b056f537.jpg",
+        "image_source_page": "https://www.red-dot.org/project/air-6488-39728",
+        "image_status": "normalized_exact_v41_confirmed",
+        "geometry_ready": false,
+        "weight_ready": false,
+        "cve_ready": false,
+        "cve_blocking_fields": [
+          "exact_dimensions",
+          "weight_kg",
+          "manufacturer_wind_loads"
+        ],
+        "allow_null_pending_fields": true
+      },
+      "technology": [
+        "AAS",
+        "5G NR",
+        "64T64R Massive MIMO"
+      ],
+      "visual": {
+        "image_main": "images/ericsson/air_6488.webp",
+        "image_thumb": "images/ericsson/air_6488_thumb.webp",
+        "verified_exact_model": true,
+        "source_url": "https://www.ericsson.com/en/cases/2020/skt-build-5g-with-precision",
+        "source_type": "official_case_exact_model",
+        "normalization_status": "official_page_locked_direct_asset_pending",
+        "binary_in_local_catalog": false
+      },
+      "tams_library": {
+        "technology_group": "5G",
+        "record_state": "frozen_for_tams_integration",
+        "dimensions_status": "pending_exact_documentation",
+        "weight_status": "pending_exact_documentation",
+        "wind_status": "pending_exact_documentation",
+        "cve_ready": false,
+        "cve_blocking_fields": [
+          "exact_dimensions",
+          "weight_kg",
+          "manufacturer_wind_loads"
+        ],
+        "do_not_infer_missing_values": true
+      },
+      "dimensions": null,
+      "library_display": {
+        "catalog_card": "partial",
+        "dimensions_text": "Pendiente de documentación exacta",
+        "weight_text": "Pendiente de documentación exacta",
+        "wind_frontal_text": "Pendiente de documentación exacta",
+        "wind_lateral_text": "Pendiente de documentación exacta",
+        "wind_max_text": "Pendiente de documentación exacta",
+        "cve_status_text": "CVE PARCIAL · falta: exact_dimensions, weight_kg, manufacturer_wind_loads"
+      },
+      "image": {
+        "local_main": "equipment/antennas/images/ericsson/ericsson_air6488.webp",
+        "local_thumb": "equipment/antennas/images/ericsson/thumbs/ericsson_air6488.webp",
+        "exact_model_verified": true,
+        "source_url": "https://www.red-dot.org/fileadmin/_processed_/6/b/csm_47-03787-2019PD-1_09b056f537.jpg",
+        "source_page": "https://www.red-dot.org/project/air-6488-39728",
+        "status": "local_download_required",
+        "allow_similar_substitute": false
+      }
+    },
+    {
+      "catalog_id": "ericsson_800442802",
+      "manufacturer": "Ericsson",
+      "model": "800442802",
+      "type": "Passive Base Station Sector Antenna",
+      "equipment_class": "passive_sector_antenna_tdd_multiband",
+      "variant": "Antenna 6600 2L 8M 2.0m",
+      "datasheet": {
+        "document_id": "Ericsson Antenna System Catalog 2023",
+        "manufacturer_document": true,
+        "revision": "2023",
+        "source_copy_status": "manufacturer_catalog_full_specs_secondary_host",
+        "source_verified_against_document_markings": true
+      },
+      "rf": {
+        "frequency_ranges_mhz": [
+          {
+            "min": 698,
+            "max": 960,
+            "arrays": 2
+          },
+          {
+            "min": 1427,
+            "max": 2690,
+            "arrays": 2
+          },
+          {
+            "min": 2300,
+            "max": 2690,
+            "arrays": 2
+          },
+          {
+            "min": 3300,
+            "max": 3800,
+            "arrays": 4
+          }
+        ],
+        "tdd_frequency_mhz": {
+          "min": 3300,
+          "max": 3800
+        },
+        "tdd_beamwidth_deg": 90,
+        "tdd_gain_dbi": 15.4
+      },
+      "mechanical": {
+        "height_mm": 1999,
+        "width_mm": 448,
+        "depth_mm": 164,
+        "weight_kg": 39.0,
+        "weight_kg_with_clamps": 43.5,
+        "mounting_hardware_category": "XM",
+        "height_m": 1.999,
+        "width_m": 0.448,
+        "depth_m": 0.164
+      },
+      "wind": {
+        "reference_speed_kmh": 150,
+        "frontal_n": 725,
+        "maximal_n": 950,
+        "max_wind_velocity_kmh": 241,
+        "load_source": "Ericsson Antenna System Catalog 2023"
+      },
+      "cve": {
+        "cve_ready": true,
+        "blocking_fields": [],
+        "data_status": "manufacturer_catalog_specs",
+        "geometry_source": "Ericsson Antenna System Catalog 2023",
+        "preferred_weight_kg": 39.0,
+        "use_manufacturer_wind_loads_when_applicable": true,
+        "status_label": "CVE listo",
+        "dimensions_complete": true,
+        "weight_complete": true,
+        "wind_complete": true
+      },
+      "source": {
+        "manufacturer": "Ericsson",
+        "document_type": "manufacturer_catalog",
+        "official_current_url_verified": false,
+        "notes": "Ericsson Antenna System Catalog 2023, TDD Configuration; exact model 800442802."
+      },
+      "catalog_history": {
+        "catalogs_seen": [
+          2023
+        ],
+        "eligible_from_2015_policy": true,
+        "first_catalog_seen": 2023,
+        "last_catalog_seen": 2023
+      },
+      "tams_extension": {
+        "identity": {
+          "equipment_id": "ericsson_800442802",
+          "manufacturer_slug": "ericsson",
+          "model_slug": "800442802"
+        },
+        "visual": {
+          "image_main": "images/ericsson/800442802.webp",
+          "image_thumb": "images/ericsson/800442802_thumb.webp",
+          "image_status": "manufacturer_catalog_exact_model",
+          "source_url": "https://www.scribd.com/document/841462371/Antena-Ericsson-800442802",
+          "source_type": "manufacturer_catalog_exact_model_secondary_host",
+          "verified_exact_model": true,
+          "priority": "HIGH",
+          "normalization_status": "catalog_visual_locked_direct_asset_pending"
+        },
+        "ai": {
+          "coarse_class": "passive_sector_antenna",
+          "training_class": "ericsson_800442802",
+          "synthetic_geometry_ready": true,
+          "synthetic_geometry_basis": [
+            "height_mm",
+            "width_mm",
+            "depth_mm"
+          ],
+          "distinguishing_features_status": "pending_manual_review"
+        },
+        "cve_integration": {
+          "status": "ready",
+          "blocking_fields": [],
+          "instance_required_fields": [
+            "station_object_id",
+            "x_m",
+            "y_m",
+            "z_m",
+            "mount_height_m",
+            "azimuth_deg",
+            "tilt_deg",
+            "support_face_or_sector",
+            "offset_to_mast_m"
+          ]
+        },
+        "tams_status": {
+          "catalog_record_ready": true,
+          "visual_ready": true,
+          "ai_ready": true,
+          "cve_ready": true,
+          "scope_eligible": true
+        }
+      },
+      "tams_integration": {
+        "technology_group": "5G",
+        "tams_catalog_state": "FROZEN_FOR_FIRST_INTEGRATION",
+        "local_image_main": "images/5g/ericsson_800442802.webp",
+        "local_image_thumb": "images/5g/thumbs/ericsson_800442802.webp",
+        "local_image_binary_in_package": false,
+        "image_exact_verified": false,
+        "image_source_url": null,
+        "image_source_page": "https://www.scribd.com/document/841462371/Antena-Ericsson-800442802",
+        "image_status": "catalog_visual_locked_direct_asset_pending",
+        "geometry_ready": true,
+        "weight_ready": true,
+        "cve_ready": true,
+        "cve_blocking_fields": [],
+        "allow_null_pending_fields": true
+      },
+      "technology": [],
+      "visual": {
+        "image_main": "images/ericsson/800442802.webp",
+        "image_thumb": "images/ericsson/800442802_thumb.webp",
+        "verified_exact_model": true,
+        "source_url": "https://www.scribd.com/document/841462371/Antena-Ericsson-800442802",
+        "source_type": "manufacturer_catalog_exact_model_secondary_host",
+        "normalization_status": "catalog_visual_locked_direct_asset_pending",
+        "binary_in_local_catalog": false
+      },
+      "tams_library": {
+        "technology_group": "5G",
+        "record_state": "frozen_for_tams_integration",
+        "dimensions_status": "exact",
+        "weight_status": "exact",
+        "wind_status": "exact",
+        "cve_ready": true,
+        "cve_blocking_fields": [],
+        "do_not_infer_missing_values": true
+      },
+      "dimensions": {
+        "height_mm": 1999,
+        "width_mm": 448,
+        "depth_mm": 164,
+        "text": "1999 × 448 × 164 mm"
+      },
+      "library_display": {
+        "catalog_card": "complete",
+        "dimensions_text": "1999 × 448 × 164 mm",
+        "weight_text": "39.0 kg",
+        "wind_frontal_text": "725 N",
+        "wind_lateral_text": "Pendiente de documentación exacta",
+        "wind_max_text": "950 N",
+        "cve_status_text": "CVE LISTO",
+        "badge": "CVE LISTO",
+        "highlight_cve": true
+      },
+      "image": {
+        "local_main": null,
+        "local_thumb": null,
+        "exact_model_verified": false,
+        "source_url": null,
+        "source_page": "https://www.scribd.com/document/841462371/Antena-Ericsson-800442802",
+        "status": "exact_image_pending",
+        "allow_similar_substitute": false
+      }
+    },
+    {
+      "catalog_id": "ericsson_air3219",
+      "manufacturer": "Ericsson",
+      "model": "AIR 3219",
+      "type": "Antenna Integrated Radio",
+      "equipment_class": "active_antenna_integrated_radio",
+      "rf": {
+        "technology": "5G NR",
+        "frequency_evidence_mhz": [
+          3500
+        ],
+        "band_class": "TDD mid-band",
+        "mimo": "32T32R Massive MIMO",
+        "frequency_scope_match": "confirmed 3.5 GHz deployment",
+        "operating_band_variant": "B78AA",
+        "frequency_range_mhz": [
+          3300,
+          3800
+        ],
+        "antenna_elements": 192,
+        "instantaneous_bandwidth_mhz": 200,
+        "output_power_w": 320
+      },
+      "mechanical": {
+        "dimensions_publicly_available": true,
+        "weight_kg": 13,
+        "height_mm": 667,
+        "width_mm": 407,
+        "depth_mm": 198,
+        "cooling": "natural_convection",
+        "environment": "outdoor",
+        "mounting_options": [
+          "wall",
+          "pole/mast"
+        ],
+        "dimensions_source": "Ericsson-generated AIR 3219 B78AA datasheet dated 18 Aug 2023, public Scribd copy",
+        "height_m": 0.667,
+        "width_m": 0.407,
+        "depth_m": 0.198
+      },
+      "wind": {
+        "status": "requires_exact_variant_datasheet_for_cve"
+      },
+      "cve": {
+        "cve_ready": false,
+        "blocking_fields": [
+          "manufacturer_wind_loads"
+        ],
+        "data_status": "exact_variant_dimensions_weight_and_rf_confirmed_wind_loads_pending",
+        "preferred_weight_kg": 13,
+        "status_label": "CVE parcial",
+        "dimensions_complete": true,
+        "weight_complete": true,
+        "wind_complete": false
+      },
+      "source": {
+        "manufacturer": "Ericsson",
+        "document_type": "official_press_release",
+        "official_current_url_verified": true,
+        "notes": "Ericsson confirms AIR 3219 for 3.5 GHz deployment in 2026."
+      },
+      "catalog_history": {
+        "catalogs_seen": [
+          2022,
+          2023,
+          2026
+        ],
+        "eligible_from_2015_policy": true,
+        "first_catalog_seen": 2022,
+        "last_catalog_seen": 2026
+      },
+      "tams_extension": {
+        "identity": {
+          "equipment_id": "ericsson_air3219",
+          "manufacturer_slug": "ericsson",
+          "model_slug": "air_3219"
+        },
+        "visual": {
+          "image_main": "images/ericsson/air_3219.webp",
+          "image_thumb": "images/ericsson/air_3219_thumb.webp",
+          "image_status": "official_deployment_image_found",
+          "source_url": "https://www.ericsson.com/en/press-releases/2/2026/ericsson-to-deploy-5g-ran-in-sri-lanka-with-dialog-axiata",
+          "source_type": "official_deployment_page_exact_model",
+          "verified_exact_model": true,
+          "priority": "HIGH",
+          "normalization_status": "official_page_locked_direct_asset_pending",
+          "notes": "Official Ericsson release identifies AIR 3219 for 3.5 GHz deployment."
+        },
+        "ai": {
+          "coarse_class": "active_antenna_integrated_radio",
+          "training_class": "ericsson_air3219",
+          "synthetic_geometry_ready": true,
+          "synthetic_geometry_basis": [
+            "height_mm",
+            "width_mm",
+            "depth_mm",
+            "weight_kg"
+          ],
+          "distinguishing_features_status": "exact_outer_dimensions_available"
+        },
+        "cve_integration": {
+          "status": "blocked",
+          "blocking_fields": [
+            "manufacturer_wind_loads"
+          ],
+          "instance_required_fields": [
+            "station_object_id",
+            "x_m",
+            "y_m",
+            "z_m",
+            "mount_height_m",
+            "azimuth_deg",
+            "tilt_deg",
+            "support_face_or_sector",
+            "offset_to_mast_m"
+          ]
+        },
+        "tams_status": {
+          "catalog_record_ready": true,
+          "visual_ready": true,
+          "ai_ready": false,
+          "cve_ready": false,
+          "scope_eligible": true
+        }
+      },
+      "variant": "AIR 3219 B78AA",
+      "part_number": "KRD 901 666/11",
+      "tams_integration": {
+        "technology_group": "5G",
+        "tams_catalog_state": "FROZEN_FOR_FIRST_INTEGRATION",
+        "local_image_main": "images/5g/ericsson_air3219.webp",
+        "local_image_thumb": "images/5g/thumbs/ericsson_air3219.webp",
+        "local_image_binary_in_package": false,
+        "image_exact_verified": false,
+        "image_source_url": null,
+        "image_source_page": "https://www.ericsson.com/en/press-releases/2/2026/ericsson-to-deploy-5g-ran-in-sri-lanka-with-dialog-axiata",
+        "image_status": "official_page_locked_direct_asset_pending",
+        "geometry_ready": true,
+        "weight_ready": true,
+        "cve_ready": false,
+        "cve_blocking_fields": [
+          "manufacturer_wind_loads"
+        ],
+        "allow_null_pending_fields": true
+      },
+      "technology": [
+        "AAS",
+        "5G NR",
+        "32T32R Massive MIMO"
+      ],
+      "visual": {
+        "image_main": "images/ericsson/air_3219.webp",
+        "image_thumb": "images/ericsson/air_3219_thumb.webp",
+        "verified_exact_model": true,
+        "source_url": "https://www.ericsson.com/en/press-releases/2/2026/ericsson-to-deploy-5g-ran-in-sri-lanka-with-dialog-axiata",
+        "source_type": "official_deployment_page_exact_model",
+        "normalization_status": "official_page_locked_direct_asset_pending",
+        "binary_in_local_catalog": false
+      },
+      "tams_library": {
+        "technology_group": "5G",
+        "record_state": "frozen_for_tams_integration",
+        "dimensions_status": "exact",
+        "weight_status": "exact",
+        "wind_status": "pending_exact_documentation",
+        "cve_ready": false,
+        "cve_blocking_fields": [
+          "manufacturer_wind_loads"
+        ],
+        "do_not_infer_missing_values": true
+      },
+      "dimensions": {
+        "height_mm": 667,
+        "width_mm": 407,
+        "depth_mm": 198,
+        "text": "667 × 407 × 198 mm"
+      },
+      "library_display": {
+        "catalog_card": "partial",
+        "dimensions_text": "667 × 407 × 198 mm",
+        "weight_text": "13 kg",
+        "wind_frontal_text": "Pendiente de documentación exacta",
+        "wind_lateral_text": "Pendiente de documentación exacta",
+        "wind_max_text": "Pendiente de documentación exacta",
+        "cve_status_text": "CVE PARCIAL · falta: manufacturer_wind_loads"
+      },
+      "image": {
+        "local_main": null,
+        "local_thumb": null,
+        "exact_model_verified": false,
+        "source_url": null,
+        "source_page": "https://www.ericsson.com/en/press-releases/2/2026/ericsson-to-deploy-5g-ran-in-sri-lanka-with-dialog-axiata",
+        "status": "exact_image_pending",
+        "allow_similar_substitute": false
+      }
+    },
+    {
+      "catalog_id": "ericsson_air3255",
+      "manufacturer": "Ericsson",
+      "model": "AIR 3255",
+      "type": "Antenna Integrated Radio",
+      "equipment_class": "active_antenna_integrated_radio",
+      "rf": {
+        "technology": "5G NR",
+        "frequency_evidence_mhz": [
+          3500
+        ],
+        "band_class": "single-band TDD mid-band",
+        "mimo": "32T32R",
+        "instantaneous_bandwidth_mhz": 200,
+        "output_power_w": 200,
+        "frequency_scope_match": "confirmed by Ericsson Liberty Costa Rica source: AIR 3255 Massive MIMO radio in 3.5 GHz",
+        "official_deployment_frequency_mhz": 3500
+      },
+      "mechanical": {
+        "weight_kg": 12,
+        "weight_status": "official 3.5 GHz deployment/source states 12 kg; exact product variant to be retained",
+        "dimensions_publicly_available": false
+      },
+      "wind": {
+        "status": "requires_exact_variant_datasheet_for_cve"
+      },
+      "cve": {
+        "cve_ready": false,
+        "blocking_fields": [
+          "exact_dimensions",
+          "manufacturer_wind_loads"
+        ],
+        "data_status": "official_product_page_and_3p5GHz_deployment_confirmed",
+        "preferred_weight_kg": 12,
+        "status_label": "CVE parcial",
+        "dimensions_complete": false,
+        "weight_complete": true,
+        "wind_complete": false
+      },
+      "source": {
+        "manufacturer": "Ericsson",
+        "document_type": "official_product_and_deployment_sources",
+        "official_current_url_verified": true,
+        "notes": "Ericsson product page defines AIR 3255; official 2026 deployment confirms 3.5 GHz variant at 12 kg.",
+        "frequency_confirmation_url": "https://www.ericsson.com/en/press-releases/latin-america/2026/liberty-and-ericsson-deploy-sustainable-energy-efficient-and-high-performance-5g-network-in-costa-rica"
+      },
+      "catalog_history": {
+        "catalogs_seen": [
+          2024,
+          2025,
+          2026
+        ],
+        "eligible_from_2015_policy": true,
+        "first_catalog_seen": 2024,
+        "last_catalog_seen": 2026
+      },
+      "tams_extension": {
+        "identity": {
+          "equipment_id": "ericsson_air3255",
+          "manufacturer_slug": "ericsson",
+          "model_slug": "air_3255"
+        },
+        "visual": {
+          "image_main": "images/ericsson/air_3255.webp",
+          "image_thumb": "images/ericsson/air_3255_thumb.webp",
+          "image_status": "official_product_image_found",
+          "source_url": "https://www.ericsson.com/en/portfolio/networks/ericsson-radio-system/radio/macro/massive-mimo/air-3255",
+          "source_type": "official_product_image",
+          "verified_exact_model": true,
+          "priority": "HIGH",
+          "direct_image_url": "https://mediabank.ericsson.net/portfolio/main/173388_575ffcd8b40b372d87b2f0d8e8363d80.jpg",
+          "normalization_status": "source_locked_download_pending"
+        },
+        "ai": {
+          "coarse_class": "active_antenna_integrated_radio",
+          "training_class": "ericsson_air3255",
+          "synthetic_geometry_ready": false,
+          "synthetic_geometry_basis": [],
+          "distinguishing_features_status": "pending_exact_dimensions"
+        },
+        "cve_integration": {
+          "status": "blocked",
+          "blocking_fields": [
+            "exact_dimensions",
+            "manufacturer_wind_loads"
+          ],
+          "instance_required_fields": [
+            "station_object_id",
+            "x_m",
+            "y_m",
+            "z_m",
+            "mount_height_m",
+            "azimuth_deg",
+            "tilt_deg",
+            "support_face_or_sector",
+            "offset_to_mast_m"
+          ]
+        },
+        "tams_status": {
+          "catalog_record_ready": true,
+          "visual_ready": true,
+          "ai_ready": false,
+          "cve_ready": false,
+          "scope_eligible": true
+        }
+      },
+      "tams_integration": {
+        "technology_group": "5G",
+        "tams_catalog_state": "FROZEN_FOR_FIRST_INTEGRATION",
+        "local_image_main": "images/5g/ericsson_air3255.webp",
+        "local_image_thumb": "images/5g/thumbs/ericsson_air3255.webp",
+        "local_image_binary_in_package": false,
+        "image_exact_verified": true,
+        "image_source_url": "https://mediabank.ericsson.net/portfolio/main/173388_575ffcd8b40b372d87b2f0d8e8363d80.jpg",
+        "image_source_page": "https://www.ericsson.com/en/portfolio/networks/ericsson-radio-system/radio/macro/massive-mimo/air-3255",
+        "image_status": "normalized_exact_v39_confirmed",
+        "geometry_ready": false,
+        "weight_ready": true,
+        "cve_ready": false,
+        "cve_blocking_fields": [
+          "exact_dimensions",
+          "manufacturer_wind_loads"
+        ],
+        "allow_null_pending_fields": true
+      },
+      "technology": [
+        "AAS",
+        "5G NR",
+        "32T32R"
+      ],
+      "visual": {
+        "image_main": "images/ericsson/air_3255.webp",
+        "image_thumb": "images/ericsson/air_3255_thumb.webp",
+        "verified_exact_model": true,
+        "source_url": "https://www.ericsson.com/en/portfolio/networks/ericsson-radio-system/radio/macro/massive-mimo/air-3255",
+        "source_type": "official_product_image",
+        "normalization_status": "source_locked_download_pending",
+        "binary_in_local_catalog": false
+      },
+      "tams_library": {
+        "technology_group": "5G",
+        "record_state": "frozen_for_tams_integration",
+        "dimensions_status": "pending_exact_documentation",
+        "weight_status": "exact",
+        "wind_status": "pending_exact_documentation",
+        "cve_ready": false,
+        "cve_blocking_fields": [
+          "exact_dimensions",
+          "manufacturer_wind_loads"
+        ],
+        "do_not_infer_missing_values": true
+      },
+      "dimensions": null,
+      "library_display": {
+        "catalog_card": "partial",
+        "dimensions_text": "Pendiente de documentación exacta",
+        "weight_text": "12 kg",
+        "wind_frontal_text": "Pendiente de documentación exacta",
+        "wind_lateral_text": "Pendiente de documentación exacta",
+        "wind_max_text": "Pendiente de documentación exacta",
+        "cve_status_text": "CVE PARCIAL · falta: exact_dimensions, manufacturer_wind_loads"
+      },
+      "image": {
+        "local_main": "equipment/antennas/images/ericsson/ericsson_air3255.webp",
+        "local_thumb": "equipment/antennas/images/ericsson/thumbs/ericsson_air3255.webp",
+        "exact_model_verified": true,
+        "source_url": "https://mediabank.ericsson.net/portfolio/main/173388_575ffcd8b40b372d87b2f0d8e8363d80.jpg",
+        "source_page": "https://www.ericsson.com/en/portfolio/networks/ericsson-radio-system/radio/macro/massive-mimo/air-3255",
+        "status": "local_download_required",
+        "allow_similar_substitute": false
+      }
+    },
+    {
+      "catalog_id": "ericsson_air3218",
+      "manufacturer": "Ericsson",
+      "model": "Interleaved AIR 3218",
+      "type": "Active-Passive Interleaved Antenna Integrated Radio",
+      "equipment_class": "active_passive_interleaved_air",
+      "rf": {
+        "frequency_scope_confirmed_mhz": {
+          "min": 700,
+          "max": 3500
+        },
+        "technology": "FDD low/mid band + TDD Massive MIMO",
+        "frequency_scope_match": "official Ericsson source explicitly states 700 MHz to 3.5 GHz"
+      },
+      "mechanical": {
+        "mounting": [
+          "rooftop",
+          "tower",
+          "wall",
+          "pole"
+        ],
+        "dimensions_publicly_available": false,
+        "weight_kg": null
+      },
+      "wind": {
+        "status": "exact_CVE_values_pending"
+      },
+      "cve": {
+        "cve_ready": false,
+        "blocking_fields": [
+          "exact_dimensions",
+          "weight_kg",
+          "manufacturer_wind_loads"
+        ],
+        "data_status": "official_scope_and_macro_mounting_confirmed",
+        "preferred_weight_kg": null,
+        "status_label": "CVE parcial",
+        "dimensions_complete": false,
+        "weight_complete": false,
+        "wind_complete": false
+      },
+      "source": {
+        "manufacturer": "Ericsson",
+        "document_type": "official_press_release",
+        "official_current_url_verified": true,
+        "notes": "Ericsson confirms Interleaved AIR 3218 supports 700 MHz to 3.5 GHz and macro rooftop/tower/wall/pole mounting."
+      },
+      "catalog_history": {
+        "catalogs_seen": [
+          2022,
+          2023,
+          2024,
+          2025,
+          2026
+        ],
+        "eligible_from_2015_policy": true,
+        "first_catalog_seen": 2022,
+        "last_catalog_seen": 2026
+      },
+      "tams_extension": {
+        "identity": {
+          "equipment_id": "ericsson_air3218",
+          "manufacturer_slug": "ericsson",
+          "model_slug": "air_3218"
+        },
+        "visual": {
+          "image_main": "images/ericsson/air_3218.webp",
+          "image_thumb": "images/ericsson/air_3218_thumb.webp",
+          "image_status": "official_deployment_image_found",
+          "source_url": "https://www.ericsson.com/en/press-releases/3/2024/vodafone-and-ericsson-introduce-compact-antennas-to-boost-5g-coverage-in-germany",
+          "source_type": "official_deployment_page_exact_model",
+          "verified_exact_model": true,
+          "priority": "HIGH",
+          "normalization_status": "official_page_locked_direct_asset_pending",
+          "notes": "Official Ericsson deployment page explicitly identifies Interleaved AIR 3218 and includes deployment imagery."
+        },
+        "ai": {
+          "coarse_class": "active_passive_interleaved_air",
+          "training_class": "ericsson_air3218",
+          "synthetic_geometry_ready": false,
+          "synthetic_geometry_basis": [],
+          "distinguishing_features_status": "pending_exact_dimensions"
+        },
+        "cve_integration": {
+          "status": "blocked",
+          "blocking_fields": [
+            "exact_dimensions",
+            "weight_kg",
+            "manufacturer_wind_loads"
+          ],
+          "instance_required_fields": [
+            "station_object_id",
+            "x_m",
+            "y_m",
+            "z_m",
+            "mount_height_m",
+            "azimuth_deg",
+            "tilt_deg",
+            "support_face_or_sector",
+            "offset_to_mast_m"
+          ]
+        },
+        "tams_status": {
+          "catalog_record_ready": true,
+          "visual_ready": true,
+          "ai_ready": false,
+          "cve_ready": false,
+          "scope_eligible": true
+        }
+      },
+      "tams_integration": {
+        "technology_group": "5G",
+        "tams_catalog_state": "FROZEN_FOR_FIRST_INTEGRATION",
+        "local_image_main": "images/5g/ericsson_air3218.webp",
+        "local_image_thumb": "images/5g/thumbs/ericsson_air3218.webp",
+        "local_image_binary_in_package": false,
+        "image_exact_verified": true,
+        "image_source_url": "https://www.ericsson.com/4a0846/assets/global/qbank/2023/07/17/radio3218-168429c443e2c6836c1e89d52add806b7017f0.jpg",
+        "image_source_page": "https://www.ericsson.com/en/press-releases/3/2024/vodafone-and-ericsson-introduce-compact-antennas-to-boost-5g-coverage-in-germany",
+        "image_status": "normalized_exact_v39_confirmed",
+        "geometry_ready": false,
+        "weight_ready": false,
+        "cve_ready": false,
+        "cve_blocking_fields": [
+          "exact_dimensions",
+          "weight_kg",
+          "manufacturer_wind_loads"
+        ],
+        "allow_null_pending_fields": true
+      },
+      "technology": [
+        "active+passive",
+        "AAS-ready",
+        "AAS",
+        "FDD low/mid band + TDD Massive MIMO"
+      ],
+      "visual": {
+        "image_main": "images/ericsson/air_3218.webp",
+        "image_thumb": "images/ericsson/air_3218_thumb.webp",
+        "verified_exact_model": true,
+        "source_url": "https://www.ericsson.com/en/press-releases/3/2024/vodafone-and-ericsson-introduce-compact-antennas-to-boost-5g-coverage-in-germany",
+        "source_type": "official_deployment_page_exact_model",
+        "normalization_status": "official_page_locked_direct_asset_pending",
+        "binary_in_local_catalog": false
+      },
+      "tams_library": {
+        "technology_group": "5G",
+        "record_state": "frozen_for_tams_integration",
+        "dimensions_status": "pending_exact_documentation",
+        "weight_status": "pending_exact_documentation",
+        "wind_status": "pending_exact_documentation",
+        "cve_ready": false,
+        "cve_blocking_fields": [
+          "exact_dimensions",
+          "weight_kg",
+          "manufacturer_wind_loads"
+        ],
+        "do_not_infer_missing_values": true
+      },
+      "dimensions": null,
+      "library_display": {
+        "catalog_card": "partial",
+        "dimensions_text": "Pendiente de documentación exacta",
+        "weight_text": "Pendiente de documentación exacta",
+        "wind_frontal_text": "Pendiente de documentación exacta",
+        "wind_lateral_text": "Pendiente de documentación exacta",
+        "wind_max_text": "Pendiente de documentación exacta",
+        "cve_status_text": "CVE PARCIAL · falta: exact_dimensions, weight_kg, manufacturer_wind_loads"
+      },
+      "image": {
+        "local_main": "equipment/antennas/images/ericsson/ericsson_air3218.webp",
+        "local_thumb": "equipment/antennas/images/ericsson/thumbs/ericsson_air3218.webp",
+        "exact_model_verified": true,
+        "source_url": "https://www.ericsson.com/4a0846/assets/global/qbank/2023/07/17/radio3218-168429c443e2c6836c1e89d52add806b7017f0.jpg",
+        "source_page": "https://www.ericsson.com/en/press-releases/3/2024/vodafone-and-ericsson-introduce-compact-antennas-to-boost-5g-coverage-in-germany",
+        "status": "local_download_required",
+        "allow_similar_substitute": false
+      }
+    },
+    {
+      "catalog_id": "ericsson_air3227",
+      "manufacturer": "Ericsson",
+      "model": "AIR 3227",
+      "type": "Antenna Integrated Radio",
+      "equipment_class": "active_antenna_integrated_radio",
+      "rf": {
+        "technology": "5G NR",
+        "frequency_evidence_mhz": [
+          3500
+        ],
+        "band_class": "TDD mid-band",
+        "instantaneous_bandwidth_mhz": 200,
+        "frequency_scope_match": "official Ericsson source confirms 3.5 GHz deployment"
+      },
+      "mechanical": {
+        "dimensions_publicly_available": true,
+        "weight_kg": 21.5,
+        "height_mm": 568,
+        "width_mm": 370,
+        "depth_mm": 225,
+        "mounting_kit_weight_kg": {
+          "SXK1092015_1": 4.4,
+          "SXK1092016_1": 5.2
+        },
+        "pole_mount_range_mm": {
+          "circular_min_diameter": 76,
+          "circular_max_diameter": 114
+        },
+        "dimensions_source": "Ericsson AIR 3227 Description 281/1551-LZA 701 6001/1 Uen A",
+        "height_m": 0.568,
+        "width_m": 0.37,
+        "depth_m": 0.225
+      },
+      "wind": {
+        "status": "exact_CVE_values_pending"
+      },
+      "cve": {
+        "cve_ready": false,
+        "blocking_fields": [
+          "manufacturer_wind_loads"
+        ],
+        "data_status": "exact_dimensions_weight_and_mounting_confirmed_wind_loads_pending",
+        "preferred_weight_kg": 21.5,
+        "status_label": "CVE parcial",
+        "dimensions_complete": true,
+        "weight_complete": true,
+        "wind_complete": false
+      },
+      "source": {
+        "manufacturer": "Ericsson",
+        "document_type": "official_press_release",
+        "official_current_url_verified": true,
+        "notes": "Ericsson confirms AIR 3227 for 3.5 GHz mid-band deployment."
+      },
+      "catalog_history": {
+        "catalogs_seen": [
+          2021,
+          2022,
+          2024
+        ],
+        "eligible_from_2015_policy": true,
+        "first_catalog_seen": 2021,
+        "last_catalog_seen": 2024
+      },
+      "tams_extension": {
+        "identity": {
+          "equipment_id": "ericsson_air3227",
+          "manufacturer_slug": "ericsson",
+          "model_slug": "air_3227"
+        },
+        "visual": {
+          "image_main": "images/ericsson/air_3227.webp",
+          "image_thumb": "images/ericsson/air_3227_thumb.webp",
+          "image_status": "official_product/deployment_image_found",
+          "source_url": "https://www.ericsson.com/en/blog/2021/12/a-holistic-approach-to-address-ran-energy-efficiency",
+          "source_type": "official_blog_exact_model_image",
+          "verified_exact_model": true,
+          "priority": "MEDIUM",
+          "normalization_status": "official_page_locked_direct_asset_pending",
+          "notes": "Ericsson blog includes an AIR 3227 figure explicitly labeled as the product."
+        },
+        "ai": {
+          "coarse_class": "active_antenna_integrated_radio",
+          "training_class": "ericsson_air3227",
+          "synthetic_geometry_ready": true,
+          "synthetic_geometry_basis": [
+            "height_mm",
+            "width_mm",
+            "depth_mm",
+            "weight_kg"
+          ],
+          "distinguishing_features_status": "exact_outer_dimensions_available"
+        },
+        "cve_integration": {
+          "status": "blocked",
+          "blocking_fields": [
+            "manufacturer_wind_loads"
+          ],
+          "instance_required_fields": [
+            "station_object_id",
+            "x_m",
+            "y_m",
+            "z_m",
+            "mount_height_m",
+            "azimuth_deg",
+            "tilt_deg",
+            "support_face_or_sector",
+            "offset_to_mast_m"
+          ]
+        },
+        "tams_status": {
+          "catalog_record_ready": true,
+          "visual_ready": true,
+          "ai_ready": false,
+          "cve_ready": false,
+          "scope_eligible": true
+        }
+      },
+      "tams_integration": {
+        "technology_group": "5G",
+        "tams_catalog_state": "FROZEN_FOR_FIRST_INTEGRATION",
+        "local_image_main": "images/5g/ericsson_air3227.webp",
+        "local_image_thumb": "images/5g/thumbs/ericsson_air3227.webp",
+        "local_image_binary_in_package": false,
+        "image_exact_verified": true,
+        "image_source_url": "https://img1.ecerimg.com/2f/18/0c49dbd91de7/product/149380551_s-w400xh400.jpg",
+        "image_source_page": "https://www.ecer.com/corp/details-uuu44h3-p13ys9y-ericsson-krd901220-11-air-3227-b78w-krd-901-220-11-air3227b78w-ericsson-5g.html",
+        "image_status": "normalized_exact_v42_confirmed",
+        "geometry_ready": true,
+        "weight_ready": true,
+        "cve_ready": false,
+        "cve_blocking_fields": [
+          "manufacturer_wind_loads"
+        ],
+        "allow_null_pending_fields": true
+      },
+      "technology": [
+        "AAS",
+        "5G NR"
+      ],
+      "visual": {
+        "image_main": "images/ericsson/air_3227.webp",
+        "image_thumb": "images/ericsson/air_3227_thumb.webp",
+        "verified_exact_model": true,
+        "source_url": "https://www.ericsson.com/en/blog/2021/12/a-holistic-approach-to-address-ran-energy-efficiency",
+        "source_type": "official_blog_exact_model_image",
+        "normalization_status": "official_page_locked_direct_asset_pending",
+        "binary_in_local_catalog": false
+      },
+      "tams_library": {
+        "technology_group": "5G",
+        "record_state": "frozen_for_tams_integration",
+        "dimensions_status": "exact",
+        "weight_status": "exact",
+        "wind_status": "pending_exact_documentation",
+        "cve_ready": false,
+        "cve_blocking_fields": [
+          "manufacturer_wind_loads"
+        ],
+        "do_not_infer_missing_values": true
+      },
+      "dimensions": {
+        "height_mm": 568,
+        "width_mm": 370,
+        "depth_mm": 225,
+        "text": "568 × 370 × 225 mm"
+      },
+      "library_display": {
+        "catalog_card": "partial",
+        "dimensions_text": "568 × 370 × 225 mm",
+        "weight_text": "21.5 kg",
+        "wind_frontal_text": "Pendiente de documentación exacta",
+        "wind_lateral_text": "Pendiente de documentación exacta",
+        "wind_max_text": "Pendiente de documentación exacta",
+        "cve_status_text": "CVE PARCIAL · falta: manufacturer_wind_loads"
+      },
+      "image": {
+        "local_main": "equipment/antennas/images/ericsson/ericsson_air3227.webp",
+        "local_thumb": "equipment/antennas/images/ericsson/thumbs/ericsson_air3227.webp",
+        "exact_model_verified": true,
+        "source_url": "https://img1.ecerimg.com/2f/18/0c49dbd91de7/product/149380551_s-w400xh400.jpg",
+        "source_page": "https://www.ecer.com/corp/details-uuu44h3-p13ys9y-ericsson-krd901220-11-air-3227-b78w-krd-901-220-11-air3227b78w-ericsson-5g.html",
+        "status": "local_download_required",
+        "allow_similar_substitute": false
+      }
+    },
+    {
+      "catalog_id": "ericsson_air3229",
+      "manufacturer": "Ericsson",
+      "model": "AIR 3229",
+      "type": "Dual-band Antenna Integrated Radio",
+      "equipment_class": "active_antenna_integrated_radio",
+      "rf": {
+        "technology": "5G NR",
+        "frequency_combinations_mhz": [
+          [
+            2300,
+            3500
+          ],
+          [
+            2600,
+            3500
+          ]
+        ],
+        "band_class": "dual-band TDD",
+        "mimo": "32T32R per band",
+        "antenna_elements": 192,
+        "output_power_w": 400,
+        "frequency_scope_match": "official Ericsson source confirms 2300/3500 and 2600/3500 combinations"
+      },
+      "mechanical": {
+        "dimensions_publicly_available": false,
+        "weight_kg": null
+      },
+      "wind": {
+        "status": "exact_CVE_values_pending"
+      },
+      "cve": {
+        "cve_ready": false,
+        "blocking_fields": [
+          "exact_dimensions",
+          "weight_kg",
+          "manufacturer_wind_loads"
+        ],
+        "data_status": "official_dual_band_3p5GHz_product_confirmed",
+        "preferred_weight_kg": null,
+        "status_label": "CVE parcial",
+        "dimensions_complete": false,
+        "weight_complete": false,
+        "wind_complete": false
+      },
+      "source": {
+        "manufacturer": "Ericsson",
+        "document_type": "official_press_release/blog",
+        "official_current_url_verified": true,
+        "notes": "Ericsson confirms AIR 3229 supports 2300+3500 MHz or 2600+3500 MHz."
+      },
+      "catalog_history": {
+        "catalogs_seen": [
+          2024,
+          2025,
+          2026
+        ],
+        "eligible_from_2015_policy": true,
+        "first_catalog_seen": 2024,
+        "last_catalog_seen": 2026
+      },
+      "tams_extension": {
+        "identity": {
+          "equipment_id": "ericsson_air3229",
+          "manufacturer_slug": "ericsson",
+          "model_slug": "air_3229"
+        },
+        "visual": {
+          "image_main": "images/ericsson/air_3229.webp",
+          "image_thumb": "images/ericsson/air_3229_thumb.webp",
+          "image_status": "official_deployment_image_found",
+          "source_url": "https://www.ericsson.com/en/press-releases/5/2024/eand-uae-expands-5g-network-with-ericsson-dual-band-radios-to-boost-network-performance-and-reduce-emissions",
+          "source_type": "official_deployment_page_exact_model",
+          "verified_exact_model": true,
+          "priority": "HIGH",
+          "normalization_status": "official_page_locked_direct_asset_pending",
+          "notes": "Official Ericsson release identifies AIR 3229 dual-band Massive MIMO in 2600/3500 MHz deployment."
+        },
+        "ai": {
+          "coarse_class": "active_antenna_integrated_radio",
+          "training_class": "ericsson_air3229",
+          "synthetic_geometry_ready": false,
+          "synthetic_geometry_basis": [],
+          "distinguishing_features_status": "pending_exact_dimensions"
+        },
+        "cve_integration": {
+          "status": "blocked",
+          "blocking_fields": [
+            "exact_dimensions",
+            "weight_kg",
+            "manufacturer_wind_loads"
+          ],
+          "instance_required_fields": [
+            "station_object_id",
+            "x_m",
+            "y_m",
+            "z_m",
+            "mount_height_m",
+            "azimuth_deg",
+            "tilt_deg",
+            "support_face_or_sector",
+            "offset_to_mast_m"
+          ]
+        },
+        "tams_status": {
+          "catalog_record_ready": true,
+          "visual_ready": true,
+          "ai_ready": false,
+          "cve_ready": false,
+          "scope_eligible": true
+        }
+      },
+      "tams_integration": {
+        "technology_group": "5G",
+        "tams_catalog_state": "FROZEN_FOR_FIRST_INTEGRATION",
+        "local_image_main": "images/5g/ericsson_air3229.webp",
+        "local_image_thumb": "images/5g/thumbs/ericsson_air3229.webp",
+        "local_image_binary_in_package": false,
+        "image_exact_verified": true,
+        "image_source_url": "https://www.ericsson.com/4ac381/assets/global/qbank/2024/11/14/air_3229_b40_b78ab_front_320-17716493356d72f8a82b2be5f99b208687a611.jpg",
+        "image_source_page": "https://www.ericsson.com/en/press-releases/5/2024/eand-uae-expands-5g-network-with-ericsson-dual-band-radios-to-boost-network-performance-and-reduce-emissions",
+        "image_status": "normalized_exact_v39_confirmed",
+        "geometry_ready": false,
+        "weight_ready": false,
+        "cve_ready": false,
+        "cve_blocking_fields": [
+          "exact_dimensions",
+          "weight_kg",
+          "manufacturer_wind_loads"
+        ],
+        "allow_null_pending_fields": true
+      },
+      "technology": [
+        "AAS",
+        "5G NR",
+        "32T32R per band"
+      ],
+      "visual": {
+        "image_main": "images/ericsson/air_3229.webp",
+        "image_thumb": "images/ericsson/air_3229_thumb.webp",
+        "verified_exact_model": true,
+        "source_url": "https://www.ericsson.com/en/press-releases/5/2024/eand-uae-expands-5g-network-with-ericsson-dual-band-radios-to-boost-network-performance-and-reduce-emissions",
+        "source_type": "official_deployment_page_exact_model",
+        "normalization_status": "official_page_locked_direct_asset_pending",
+        "binary_in_local_catalog": false
+      },
+      "tams_library": {
+        "technology_group": "5G",
+        "record_state": "frozen_for_tams_integration",
+        "dimensions_status": "pending_exact_documentation",
+        "weight_status": "pending_exact_documentation",
+        "wind_status": "pending_exact_documentation",
+        "cve_ready": false,
+        "cve_blocking_fields": [
+          "exact_dimensions",
+          "weight_kg",
+          "manufacturer_wind_loads"
+        ],
+        "do_not_infer_missing_values": true
+      },
+      "dimensions": null,
+      "library_display": {
+        "catalog_card": "partial",
+        "dimensions_text": "Pendiente de documentación exacta",
+        "weight_text": "Pendiente de documentación exacta",
+        "wind_frontal_text": "Pendiente de documentación exacta",
+        "wind_lateral_text": "Pendiente de documentación exacta",
+        "wind_max_text": "Pendiente de documentación exacta",
+        "cve_status_text": "CVE PARCIAL · falta: exact_dimensions, weight_kg, manufacturer_wind_loads"
+      },
+      "image": {
+        "local_main": "equipment/antennas/images/ericsson/ericsson_air3229.webp",
+        "local_thumb": "equipment/antennas/images/ericsson/thumbs/ericsson_air3229.webp",
+        "exact_model_verified": true,
+        "source_url": "https://www.ericsson.com/4ac381/assets/global/qbank/2024/11/14/air_3229_b40_b78ab_front_320-17716493356d72f8a82b2be5f99b208687a611.jpg",
+        "source_page": "https://www.ericsson.com/en/press-releases/5/2024/eand-uae-expands-5g-network-with-ericsson-dual-band-radios-to-boost-network-performance-and-reduce-emissions",
+        "status": "local_download_required",
+        "allow_similar_substitute": false
+      }
+    },
+    {
+      "catalog_id": "ericsson_air3267",
+      "manufacturer": "Ericsson",
+      "model": "AIR 3267",
+      "type": "Antenna Integrated Radio",
+      "equipment_class": "active_antenna_integrated_radio",
+      "rf": {
+        "technology": "5G NR",
+        "frequency_range_mhz": {
+          "min": 3400,
+          "max": 4100
+        },
+        "scope_overlap_mhz": {
+          "min": 3400,
+          "max": 3800
+        },
+        "band_class": "TDD mid-band",
+        "mimo": "32T32R",
+        "antenna_elements": 128,
+        "instantaneous_bandwidth_mhz": 600,
+        "total_carrier_bandwidth_mhz": 400,
+        "output_power_w": 240,
+        "frequency_scope_match": "Exact official 3400–4100 MHz operating range overlaps agreed TAMS scope 3400–3800 MHz."
+      },
+      "mechanical": {
+        "weight_kg": 13,
+        "dimensions_publicly_available": false,
+        "cooling": "passive"
+      },
+      "wind": {
+        "status": "manufacturer_wind_loads_pending_for_cve"
+      },
+      "cve": {
+        "cve_ready": false,
+        "blocking_fields": [
+          "exact_dimensions",
+          "manufacturer_wind_loads"
+        ],
+        "data_status": "official_product_page_exact_frequency_and_weight_confirmed",
+        "preferred_weight_kg": 13,
+        "use_manufacturer_wind_loads_when_applicable": true,
+        "status_label": "CVE parcial",
+        "dimensions_complete": false,
+        "weight_complete": true,
+        "wind_complete": false
+      },
+      "source": {
+        "manufacturer": "Ericsson",
+        "document_type": "official_product_page",
+        "official_current_url_verified": true,
+        "notes": "Official Ericsson AIR 3267 product page gives 3400–4100 MHz range, 13 kg, 32T32R, 128 antenna elements, 600 MHz IBW and 240 W output."
+      },
+      "catalog_history": {
+        "catalogs_seen": [
+          2026
+        ],
+        "eligible_from_2015_policy": true,
+        "first_catalog_seen": 2026,
+        "last_catalog_seen": 2026
+      },
+      "tams_extension": {
+        "identity": {
+          "equipment_id": "ericsson_air3267",
+          "manufacturer_slug": "ericsson",
+          "model_slug": "air_3267"
+        },
+        "visual": {
+          "image_main": "images/ericsson/air_3267.webp",
+          "image_thumb": "images/ericsson/air_3267_thumb.webp",
+          "image_status": "official_product_image_found",
+          "source_url": "https://www.ericsson.com/en/portfolio/networks/ericsson-radio-system/radio/macro/massive-mimo/air-3267",
+          "source_type": "official_product_image",
+          "verified_exact_model": true,
+          "priority": "HIGH",
+          "direct_image_url": "https://mediabank.ericsson.net/portfolio/main/189207_fb18d115ff5e779831ed9aa6ba275bc1.jpg",
+          "normalization_status": "source_locked_download_pending"
+        },
+        "ai": {
+          "coarse_class": "active_antenna_integrated_radio",
+          "training_class": "ericsson_air3267",
+          "synthetic_geometry_ready": false,
+          "synthetic_geometry_basis": [],
+          "distinguishing_features_status": "pending_exact_dimensions"
+        },
+        "cve_integration": {
+          "status": "blocked",
+          "blocking_fields": [
+            "exact_dimensions",
+            "manufacturer_wind_loads"
+          ],
+          "instance_required_fields": [
+            "station_object_id",
+            "x_m",
+            "y_m",
+            "z_m",
+            "mount_height_m",
+            "azimuth_deg",
+            "tilt_deg",
+            "support_face_or_sector",
+            "offset_to_mast_m"
+          ]
+        },
+        "tams_status": {
+          "catalog_record_ready": true,
+          "visual_ready": true,
+          "ai_ready": false,
+          "cve_ready": false,
+          "scope_eligible": true
+        }
+      },
+      "tams_integration": {
+        "technology_group": "5G",
+        "tams_catalog_state": "FROZEN_FOR_FIRST_INTEGRATION",
+        "local_image_main": "images/5g/ericsson_air3267.webp",
+        "local_image_thumb": "images/5g/thumbs/ericsson_air3267.webp",
+        "local_image_binary_in_package": false,
+        "image_exact_verified": true,
+        "image_source_url": "https://mediabank.ericsson.net/portfolio/main/189207_fb18d115ff5e779831ed9aa6ba275bc1.jpg",
+        "image_source_page": "https://www.ericsson.com/en/portfolio/networks/ericsson-radio-system/radio/macro/massive-mimo/air-3267",
+        "image_status": "normalized_exact_v39_confirmed",
+        "geometry_ready": false,
+        "weight_ready": true,
+        "cve_ready": false,
+        "cve_blocking_fields": [
+          "exact_dimensions",
+          "manufacturer_wind_loads"
+        ],
+        "allow_null_pending_fields": true
+      },
+      "technology": [
+        "AAS",
+        "5G NR",
+        "32T32R"
+      ],
+      "visual": {
+        "image_main": "images/ericsson/air_3267.webp",
+        "image_thumb": "images/ericsson/air_3267_thumb.webp",
+        "verified_exact_model": true,
+        "source_url": "https://www.ericsson.com/en/portfolio/networks/ericsson-radio-system/radio/macro/massive-mimo/air-3267",
+        "source_type": "official_product_image",
+        "normalization_status": "source_locked_download_pending",
+        "binary_in_local_catalog": false
+      },
+      "tams_library": {
+        "technology_group": "5G",
+        "record_state": "frozen_for_tams_integration",
+        "dimensions_status": "pending_exact_documentation",
+        "weight_status": "exact",
+        "wind_status": "pending_exact_documentation",
+        "cve_ready": false,
+        "cve_blocking_fields": [
+          "exact_dimensions",
+          "manufacturer_wind_loads"
+        ],
+        "do_not_infer_missing_values": true
+      },
+      "dimensions": null,
+      "library_display": {
+        "catalog_card": "partial",
+        "dimensions_text": "Pendiente de documentación exacta",
+        "weight_text": "13 kg",
+        "wind_frontal_text": "Pendiente de documentación exacta",
+        "wind_lateral_text": "Pendiente de documentación exacta",
+        "wind_max_text": "Pendiente de documentación exacta",
+        "cve_status_text": "CVE PARCIAL · falta: exact_dimensions, manufacturer_wind_loads"
+      },
+      "image": {
+        "local_main": "equipment/antennas/images/ericsson/ericsson_air3267.webp",
+        "local_thumb": "equipment/antennas/images/ericsson/thumbs/ericsson_air3267.webp",
+        "exact_model_verified": true,
+        "source_url": "https://mediabank.ericsson.net/portfolio/main/189207_fb18d115ff5e779831ed9aa6ba275bc1.jpg",
+        "source_page": "https://www.ericsson.com/en/portfolio/networks/ericsson-radio-system/radio/macro/massive-mimo/air-3267",
+        "status": "local_download_required",
+        "allow_similar_substitute": false
+      }
+    },
+    {
+      "catalog_id": "ericsson_air6419",
+      "manufacturer": "Ericsson",
+      "model": "AIR 6419",
+      "type": "Antenna Integrated Radio",
+      "equipment_class": "active_antenna_integrated_radio",
+      "rf": {
+        "technology": "5G NR",
+        "frequency_evidence_mhz": [
+          3500
+        ],
+        "band_class": "TDD mid-band",
+        "mimo": "64T64R Massive MIMO",
+        "antenna_elements": 192,
+        "carrier_bandwidth_mhz": 200,
+        "output_power_w": 320,
+        "frequency_scope_match": "Official Ericsson deployment source explicitly identifies AIR 6419 on 3.5 GHz 5G mid-band."
+      },
+      "mechanical": {
+        "weight_kg": 19,
+        "dimensions_publicly_available": true,
+        "cooling": "passive",
+        "height_mm": 863.3,
+        "width_mm": 506,
+        "depth_mm": 162.6,
+        "dimensions_source": "Ericsson EMF Research Laboratory GFTL-21:001254 Uen Rev B",
+        "height_m": 0.8633,
+        "width_m": 0.506,
+        "depth_m": 0.1626
+      },
+      "wind": {
+        "status": "manufacturer_wind_loads_pending_for_cve"
+      },
+      "cve": {
+        "cve_ready": false,
+        "blocking_fields": [
+          "manufacturer_wind_loads"
+        ],
+        "data_status": "exact_dimensions_and_weight_confirmed_wind_loads_pending",
+        "preferred_weight_kg": 19,
+        "use_manufacturer_wind_loads_when_applicable": true,
+        "variant_integrity_note": "Do not import B41 datasheet wind loads into the current AIR 6419 record unless the exact variant is reconciled; public B41 documents show materially different mass/dimensions.",
+        "status_label": "CVE parcial",
+        "dimensions_complete": true,
+        "weight_complete": true,
+        "wind_complete": false
+      },
+      "source": {
+        "manufacturer": "Ericsson",
+        "document_type": "official_press_release_and_case_study",
+        "official_current_url_verified": true,
+        "notes": "Ericsson confirms AIR 6419 in 3.5 GHz deployment; separate official product release gives 19 kg, 64T64R, 192 antenna elements, 200 MHz carrier bandwidth and 320 W."
+      },
+      "catalog_history": {
+        "catalogs_seen": [
+          2021,
+          2022,
+          2024,
+          2026
+        ],
+        "eligible_from_2015_policy": true,
+        "first_catalog_seen": 2021,
+        "last_catalog_seen": 2026
+      },
+      "tams_extension": {
+        "identity": {
+          "equipment_id": "ericsson_air6419",
+          "manufacturer_slug": "ericsson",
+          "model_slug": "air_6419"
+        },
+        "visual": {
+          "image_main": "images/ericsson/air_6419.webp",
+          "image_thumb": "images/ericsson/air_6419_thumb.webp",
+          "image_status": "official_product/deployment_image_found",
+          "source_url": "https://www.ericsson.com/zh-cn/press-releases/2/2021/8/-tdd-massive-mimoair-6419",
+          "source_type": "official_press_release_exact_model_image",
+          "verified_exact_model": true,
+          "priority": "HIGH",
+          "normalization_status": "official_page_locked_direct_asset_pending",
+          "notes": "Official Ericsson AIR 6419 release includes exact-model product imagery and technical specs."
+        },
+        "ai": {
+          "coarse_class": "active_antenna_integrated_radio",
+          "training_class": "ericsson_air6419",
+          "synthetic_geometry_ready": true,
+          "synthetic_geometry_basis": [
+            "height_mm",
+            "width_mm",
+            "depth_mm",
+            "weight_kg"
+          ],
+          "distinguishing_features_status": "exact_outer_dimensions_available"
+        },
+        "cve_integration": {
+          "status": "blocked",
+          "blocking_fields": [
+            "manufacturer_wind_loads"
+          ],
+          "instance_required_fields": [
+            "station_object_id",
+            "x_m",
+            "y_m",
+            "z_m",
+            "mount_height_m",
+            "azimuth_deg",
+            "tilt_deg",
+            "support_face_or_sector",
+            "offset_to_mast_m"
+          ]
+        },
+        "tams_status": {
+          "catalog_record_ready": true,
+          "visual_ready": true,
+          "ai_ready": false,
+          "cve_ready": false,
+          "scope_eligible": true
+        }
+      },
+      "tams_integration": {
+        "technology_group": "5G",
+        "tams_catalog_state": "FROZEN_FOR_FIRST_INTEGRATION",
+        "local_image_main": "images/5g/ericsson_air6419.webp",
+        "local_image_thumb": "images/5g/thumbs/ericsson_air6419.webp",
+        "local_image_binary_in_package": false,
+        "image_exact_verified": false,
+        "image_source_url": null,
+        "image_source_page": "https://manuals.plus/m/5e883e7f538df59b142c6f031c688ef5b26994af551a954e702d6e4e36892700",
+        "image_status": "exact_source_known_binary_pending",
+        "geometry_ready": true,
+        "weight_ready": true,
+        "cve_ready": false,
+        "cve_blocking_fields": [
+          "manufacturer_wind_loads"
+        ],
+        "allow_null_pending_fields": true
+      },
+      "technology": [
+        "AAS",
+        "5G NR",
+        "64T64R Massive MIMO"
+      ],
+      "visual": {
+        "image_main": "images/ericsson/air_6419.webp",
+        "image_thumb": "images/ericsson/air_6419_thumb.webp",
+        "verified_exact_model": true,
+        "source_url": "https://www.ericsson.com/zh-cn/press-releases/2/2021/8/-tdd-massive-mimoair-6419",
+        "source_type": "official_press_release_exact_model_image",
+        "normalization_status": "official_page_locked_direct_asset_pending",
+        "binary_in_local_catalog": false
+      },
+      "tams_library": {
+        "technology_group": "5G",
+        "record_state": "frozen_for_tams_integration",
+        "dimensions_status": "exact",
+        "weight_status": "exact",
+        "wind_status": "pending_exact_documentation",
+        "cve_ready": false,
+        "cve_blocking_fields": [
+          "manufacturer_wind_loads"
+        ],
+        "do_not_infer_missing_values": true
+      },
+      "dimensions": {
+        "height_mm": 863.3,
+        "width_mm": 506,
+        "depth_mm": 162.6,
+        "text": "863.3 × 506 × 162.6 mm"
+      },
+      "library_display": {
+        "catalog_card": "partial",
+        "dimensions_text": "863.3 × 506 × 162.6 mm",
+        "weight_text": "19 kg",
+        "wind_frontal_text": "Pendiente de documentación exacta",
+        "wind_lateral_text": "Pendiente de documentación exacta",
+        "wind_max_text": "Pendiente de documentación exacta",
+        "cve_status_text": "CVE PARCIAL · falta: manufacturer_wind_loads"
+      },
+      "image": {
+        "local_main": null,
+        "local_thumb": null,
+        "exact_model_verified": false,
+        "source_url": null,
+        "source_page": "https://manuals.plus/m/5e883e7f538df59b142c6f031c688ef5b26994af551a954e702d6e4e36892700",
+        "status": "exact_image_pending",
+        "allow_similar_substitute": false
       }
     }
   ],
   "catalog_research_status": {
-    "last_reviewed": "2026-08-10",
-    "policy": "Include passive, active and hybrid/interleaved mobile-sector equipment if any radiating/passive section intersects 790-2600 MHz.",
-    "important_cve_rule": "For interleaved assemblies distinguish antenna body mass from installed AAS/M-MIMO payload mass; never double-count an integrated radio."
+    "last_reviewed": "2026-08-12",
+    "policy": "5G block frozen for first TAMS integration; existing Ericsson records preserved. Exact-model/variant evidence only.",
+    "important_cve_rule": "Never infer manufacturer wind loads or missing structural values. For interleaved assemblies distinguish antenna-body mass from installed AAS/M-MIMO payload mass.",
+    "5g_integration_status": "FROZEN_FOR_FIRST_TAMS_INTEGRATION",
+    "5g_frozen_records": 13,
+    "library_v2": {
+      "date": "2026-08-12",
+      "purpose": "show exact local images and explicit CVE completeness in TAMS equipment library",
+      "image_policy": "exact-model only; no similar substitute",
+      "known_fully_cve_ready": [
+        "ericsson_800442802"
+      ]
+    }
   }
 }
