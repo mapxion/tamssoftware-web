@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "catalog_name": "TAMS Equipment Catalog",
-  "catalog_version": "2026.08.10.1",
+  "catalog_version": "2026.08.12.2",
   "offline": true,
   "remote_update": {
     "enabled": true,
@@ -25,10 +25,10 @@
         {
           "name": "Ericsson",
           "file": "ericsson.json",
-          "records": 9,
-          "version": "2026.08.10.1",
-          "catalog_scope": "mobile sector coverage 790-2600 MHz; passive + AIR/AAS + Massive MIMO + interleaved/hybrid",
-          "sha256": "128041535c6131d3079205fc413b238911722d992bf61e8b9f2cb575ca9ddcc9"
+          "records": 19,
+          "version": "2026.08.12.2",
+          "catalog_scope": "macro outdoor mobile base-station equipment; exact model/variant; 698-3800 MHz overlap; existing Ericsson + frozen 5G block",
+          "sha256": "f66149cc384b56257fe8c9600898506f7c85b827a5189a092176232a594c97e9"
         }
       ]
     }
