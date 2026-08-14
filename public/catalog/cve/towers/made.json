@@ -1,0 +1,23 @@
+{
+  "schema": "tams-cve-towers",
+  "schema_version": 1,
+  "manufacturer": "MADE",
+  "version": "2026.08.14.1",
+  "towers": [
+    {
+      "library_id": "MADE_CP30",
+      "manufacturer": "MADE",
+      "family": "",
+      "model": "CP30",
+      "variant": "",
+      "height_m": 30,
+      "type": "celosia",
+      "weight_kg": null,
+      "validated": false,
+      "source_status": "estimated",
+      "source_detail": "Entrada histórica existente en TAMS; pendiente de validar con documentación de fabricante.",
+      "modules": [],
+      "catalog_version": "2026.08.14.1"
+    }
+  ]
+}

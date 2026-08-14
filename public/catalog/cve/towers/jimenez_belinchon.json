@@ -1,0 +1,27 @@
+{
+  "schema": "tams-cve-towers",
+  "schema_version": 1,
+  "manufacturer": "Jiménez Belinchón, S.A.",
+  "version": "2026.08.14.1",
+  "towers": [
+    {
+      "library_id": "JB_CEL_40_2008_S3027",
+      "manufacturer": "Jiménez Belinchón, S.A.",
+      "family": "Celosía autoportante",
+      "model": "",
+      "variant": "",
+      "serial_number": "3027",
+      "manufacture_year": 2008,
+      "height_m": 40,
+      "type": "celosia",
+      "weight_kg": null,
+      "validated": true,
+      "source_status": "validated",
+      "source_detail": "Placa física de fabricante: Jiménez Belinchón, S.A. · 2008 · Altura T/M 40 m · N.º serie 3027. Geometría de celosía observada en fotografías de campo.",
+      "section_shape": "cuadrangular",
+      "finish": "galvanizado",
+      "modules": [],
+      "catalog_version": "2026.08.14.1"
+    }
+  ]
+}
