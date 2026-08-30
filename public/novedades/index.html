@@ -9,10 +9,10 @@
 <link rel="apple-touch-icon" href="/assets/images/favicon-tams.png">
 <link rel="stylesheet" href="/assets/css/styles.css">
 <title>Novedades de TAMS | Actualizaciones y nuevas funciones</title>
-<meta name="description" content="Consulta las novedades de TAMS: nuevas funciones, mejoras de uso, cambios en el visor 3D, mediciones, informes y gestión de infraestructuras.">
+<meta name="description" content="Consulta las novedades de TAMS®: motor CVE, modelo estructural 3D, simulación de viento, cargas, inventario técnico, mediciones, informes y gestión de infraestructuras.">
 <link rel="canonical" href="https://tamssoftware.es/novedades/">
 <meta property="og:title" content="Novedades de TAMS">
-<meta property="og:description" content="Actualizaciones, nuevas funciones y evolución de TAMS Software.">
+<meta property="og:description" content="Actualizaciones de TAMS®: cálculo y verificación estructural CVE, modelo 3D, viento, cargas, inventario técnico y nuevas funciones.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://tamssoftware.es/novedades/">
 <style>
@@ -35,6 +35,14 @@
 .news-media img{display:block;width:100%;height:auto;border-radius:16px;border:1px solid var(--line);box-shadow:0 10px 30px rgba(16,24,40,.06)}
 .news-video{position:relative;overflow:hidden;border-radius:16px;aspect-ratio:16/9;background:#0f172a;margin-top:18px}
 .news-video iframe{position:absolute;inset:0;width:100%;height:100%;border:0}.news-video .video-placeholder{position:absolute;inset:0;width:100%;height:100%;aspect-ratio:auto}
+
+
+.news-kicker{margin-bottom:28px;padding:18px 22px;border:1px solid #cfe3f7;background:#f6fbff;border-radius:18px}
+.news-kicker strong{color:#0b5fa5}
+.news-copy ul{margin:14px 0 0;padding-left:20px;color:var(--muted)}
+.news-copy li+li{margin-top:7px}
+.news-highlight{border-color:#b8d8f4;box-shadow:0 14px 42px rgba(22,119,210,.08)}
+.news-highlight .news-version{font-size:32px}
 
 </style>
 </head>
@@ -68,6 +76,71 @@
   <section class="section section-soft">
     <div class="container">
       <div class="news-list">
+
+
+        <div class="news-kicker">
+          <strong>Últimas novedades · Agosto 2026.</strong> TAMS amplía su alcance con un entorno CVE orientado al modelado, análisis y verificación estructural de torres, manteniendo diferenciados el modelo físico de la instalación y el modelo analítico utilizado para los cálculos.
+        </div>
+
+        <article class="news-item news-highlight">
+          <div class="news-meta">
+            <span class="badge">Nueva función</span>
+            <div class="news-version">CVE</div>
+            <div class="news-date">30 de agosto de 2026</div>
+          </div>
+          <div class="news-copy">
+            <h2>Nuevo entorno de cálculo y verificación estructural CVE</h2>
+            <p>TAMS incorpora un nuevo entorno de trabajo para representar la estructura resistente de una torre y relacionarla con la instalación técnica existente. El modelo estructural 3D permite consultar geometría, elementos físicos, cargas y resultados preliminares desde una única vista.</p>
+            <p style="margin-top:12px">La interfaz separa claramente la información de <strong>torre base, ficha estructural, integridad del motor CVE, verificación matemática, instalación detectada, viento, perfiles, modelo analítico, arriostramiento, refuerzos y activos físicos</strong>.</p>
+            <div class="news-tags"><span>CVE</span><span>Estructuras</span><span>Modelo 3D</span><span>Solver</span><span>Trazabilidad</span></div>
+            <div class="news-media"><img src="/assets/images/tams-cve-modelo-estructural-3d.webp" alt="Entorno CVE de TAMS con modelo estructural 3D, instalación y simulación de viento" loading="lazy" width="1280" height="809" decoding="async"></div>
+          </div>
+        </article>
+
+        <article class="news-item">
+          <div class="news-meta">
+            <span class="badge">CVE · Estructural</span>
+            <div class="news-version">3D</div>
+            <div class="news-date">Agosto 2026</div>
+          </div>
+          <div class="news-copy">
+            <h2>Modelo estructural 3D por geometría, material, tipo y módulo</h2>
+            <p>El modelo de la torre puede visualizarse por geometría y clasificarse por material, tipo de elemento o módulo. Esto facilita la lectura del conjunto y permite seleccionar barras concretas para revisar su información técnica.</p>
+            <p style="margin-top:12px">TAMS incorpora además un <strong>índice preliminar por tramo</strong> y una leyenda visual de utilización para ayudar a localizar las zonas que requieren revisión, sin confundir este screening con una comprobación normativa final.</p>
+            <div class="news-tags"><span>Geometría</span><span>Perfiles</span><span>Barras</span><span>Módulos</span><span>Índice preliminar</span></div>
+            <div class="news-media"><img src="/assets/images/tams-cve-geometria.webp" alt="Modelo estructural 3D de torre en TAMS visualizado por geometría" loading="lazy" width="1280" height="985" decoding="async"></div>
+          </div>
+        </article>
+
+        <article class="news-item">
+          <div class="news-meta">
+            <span class="badge">Nueva función</span>
+            <div class="news-version">WIND</div>
+            <div class="news-date">Agosto 2026</div>
+          </div>
+          <div class="news-copy">
+            <h2>Simulación de viento y búsqueda de dirección desfavorable</h2>
+            <p>El módulo CVE incorpora la simulación de viento mediante velocidad y dirección, con visualización del vector aplicado sobre la estación y búsqueda de direcciones para identificar escenarios más exigentes.</p>
+            <p style="margin-top:12px">El área estructural mantiene separados los controles de simulación y los apartados de <strong>viento normativo</strong>, permitiendo evolucionar el cálculo con trazabilidad de reglas y ediciones normativas.</p>
+            <div class="news-tags"><span>Viento</span><span>Dirección</span><span>Cargas</span><span>EN 1991-1-4</span><span>EN 1993-3-1</span></div>
+            <div class="news-media"><img src="/assets/images/tams-cve-cargas.webp" alt="Visualización de cargas e instalación técnica en el modelo estructural CVE de TAMS" loading="lazy" width="1280" height="991" decoding="async"></div>
+          </div>
+        </article>
+
+        <article class="news-item">
+          <div class="news-meta">
+            <span class="badge">Mejora</span>
+            <div class="news-version">LOAD</div>
+            <div class="news-date">Agosto 2026</div>
+          </div>
+          <div class="news-copy">
+            <h2>Geometría y cargas integradas en una misma vista</h2>
+            <p>TAMS puede superponer la geometría resistente y los equipos instalados para revisar cómo interactúan estructura e instalación. Antenas, parábolas, tubos y otros activos pueden formar parte de la lectura física de la estación y de su preparación para el análisis.</p>
+            <p style="margin-top:12px">La finalidad es mantener una trazabilidad clara entre <strong>lo que existe físicamente en la torre</strong>, los elementos que aportan cargas y el modelo analítico que finalmente utiliza el solver.</p>
+            <div class="news-tags"><span>Geometría + cargas</span><span>Equipos</span><span>Inventario</span><span>Modelo físico</span><span>Modelo analítico</span></div>
+            <div class="news-media"><img src="/assets/images/tams-cve-geometria-cargas.webp" alt="Modelo CVE de TAMS mostrando conjuntamente geometría estructural y cargas de la instalación" loading="lazy" width="1280" height="1121" decoding="async"></div>
+          </div>
+        </article>
 
         <article class="news-item">
           <div class="news-meta">
@@ -131,7 +204,7 @@
 
       </div>
 
-      <div class="news-note"><strong>Próximas actualizaciones:</strong> este apartado está preparado para ir incorporando cada mejora con su versión, fecha, descripción, capturas y vídeo cuando corresponda.</div>
+      <div class="news-note"><strong>Evolución continua:</strong> este historial se irá ampliando con nuevas funciones y mejoras a medida que queden integradas y validadas en TAMS. Los apartados estructurales identificados como preliminares se presentan como herramientas de análisis y diagnóstico, no como sustitución automática de una verificación normativa final.</div>
     </div>
   </section>
 
