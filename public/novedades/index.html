@@ -44,6 +44,14 @@
 .news-highlight{border-color:#b8d8f4;box-shadow:0 14px 42px rgba(22,119,210,.08)}
 .news-highlight .news-version{font-size:32px}
 
+
+.news-standards{width:100%;border-collapse:separate;border-spacing:0;margin-top:20px;border:1px solid var(--line);border-radius:14px;overflow:hidden;background:#fff}
+.news-standards th,.news-standards td{padding:13px 14px;text-align:left;vertical-align:top;border-bottom:1px solid var(--line)}
+.news-standards th{background:#f6f9fc;color:#101828;font-size:13px}
+.news-standards td{color:var(--muted);font-size:14px}
+.news-standards tr:last-child td{border-bottom:0}
+.news-standards strong{color:#101828}
+@media(max-width:760px){.news-standards{display:block;overflow-x:auto}}
 </style>
 </head>
 <body>
@@ -83,6 +91,31 @@
         </div>
 
         <article class="news-item news-highlight">
+          <div class="news-meta">
+            <span class="badge">Arquitectura normativa</span>
+            <div class="news-version">NORM</div>
+            <div class="news-date">1 de septiembre de 2026</div>
+          </div>
+          <div class="news-copy">
+            <h2>CVE evoluciona hacia un motor estructural multinorma y trazable</h2>
+            <p>TAMS está preparando el módulo CVE para trabajar con distintos marcos normativos sin mezclar automáticamente ecuaciones, coeficientes ni criterios entre normas o ediciones diferentes. Cada cálculo podrá conservar la identificación del <strong>motor normativo, edición y parámetros utilizados</strong>.</p>
+            <p style="margin-top:12px">Para España, la rama de Eurocódigos se estructura sobre <strong>UNE-EN 1990:2019</strong>, <strong>UNE-EN 1991-1-4:2018</strong> y las reglas de <strong>UNE-EN 1993</strong>, incluyendo <strong>UNE-EN 1993-3-1:2013</strong> para torres y mástiles, junto con los parámetros nacionales aplicables.</p>
+            <p style="margin-top:12px">La nueva <strong>EN 1993-3:2026</strong> ya existe a nivel europeo y unifica las reglas para torres, mástiles y chimeneas. CVE queda preparado para incorporarla cuando corresponda su adopción y configuración nacional, sin sustituir silenciosamente la rama UNE vigente.</p>
+            <p style="margin-top:12px">Para proyectos que adopten normativa TIA, CVE dispondrá de un motor independiente. La revisión actualmente publicada por TIA es <strong>ANSI/TIA-222-I</strong>; la revisión H se mantendrá como referencia de compatibilidad para proyectos que deban verificarse expresamente con esa edición.</p>
+            <table class="news-standards" aria-label="Motores normativos previstos para CVE">
+              <thead><tr><th>Ámbito</th><th>Base normativa</th><th>Tratamiento en CVE</th></tr></thead>
+              <tbody>
+                <tr><td><strong>España / Eurocódigos</strong></td><td>UNE-EN 1990 · UNE-EN 1991-1-4 · UNE-EN 1993 · UNE-EN 1993-3-1</td><td>Motor con parámetros nacionales y trazabilidad de edición</td></tr>
+                <tr><td><strong>Segunda generación Eurocódigos</strong></td><td>EN 1993-3:2026</td><td>Arquitectura preparada; activación según adopción nacional aplicable</td></tr>
+                <tr><td><strong>Proyectos TIA</strong></td><td>ANSI/TIA-222-I</td><td>Motor separado, sin reutilización automática de reglas de otras normas o revisiones</td></tr>
+              </tbody>
+            </table>
+            <p style="margin-top:14px"><strong>Objetivo:</strong> que un resultado estructural pueda responder no solo a “qué resultado dio”, sino también a <strong>con qué norma, edición, parámetros y reglas se obtuvo</strong>.</p>
+            <div class="news-tags"><span>CVE</span><span>Multinorma</span><span>UNE-EN 1990</span><span>UNE-EN 1991-1-4</span><span>UNE-EN 1993</span><span>EN 1993-3:2026</span><span>TIA-222-I</span><span>Trazabilidad</span></div>
+          </div>
+        </article>
+
+<article class="news-item news-highlight">
           <div class="news-meta">
             <span class="badge">Nueva función</span>
             <div class="news-version">CVE</div>
